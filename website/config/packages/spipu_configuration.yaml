@@ -1,0 +1,8 @@
+imports:
+  - { resource: "@SpipuConfigurationBundle/Resources/config/spipu_configuration.yaml" }
+
+spipu_configuration:
+  app.website.name:
+    type:     string
+    required: true
+    default:  "Website"

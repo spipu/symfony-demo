@@ -1,0 +1,12 @@
+parameters:
+  APP_SETTINGS_APP_ENV:             'dev'
+  APP_SETTINGS_APP_SECRET:          'ce96b39e4a36d3541ec8b232186267ee'
+  APP_SETTINGS_DATABASE_URL:        'mysql://{{ENV_NAME}}:!{{ENV_NAME}}@localhost:3306/{{ENV_NAME}}'
+  APP_SETTINGS_MAILER_URL:          'smtp://127.0.0.1:1025?encryption=&auth_mode='
+  APP_SETTINGS_CACHE_APP:           'cache.adapter.filesystem'
+  APP_SETTINGS_REDIS_CACHE_DB:      '0'
+  APP_SETTINGS_REDIS_CACHE_HOST:    'localhost'
+  APP_SETTINGS_REDIS_CACHE_PORT:    '6379'
+  APP_SETTINGS_REDIS_SESSION_DB:    '0'
+  APP_SETTINGS_REDIS_SESSION_HOST:  'localhost'
+  APP_SETTINGS_REDIS_SESSION_PORT:  '6380'

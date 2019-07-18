@@ -1,0 +1,12 @@
+[Unit]
+Description=MailDev
+After=network.target
+
+[Service]
+Type=simple
+ExecStart={{MAILDEV_BIN}}
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,5 @@
+spipu_user:
+  resource: '@SpipuUserBundle/Resources/config/routes.yaml'
+
+spipu_configuration:
+  resource: '@SpipuConfigurationBundle/Resources/config/routes.yaml'

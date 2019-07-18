@@ -1,0 +1,7 @@
+[mysqld]
+
+character-set-server = utf8
+collation-server = utf8_general_ci
+innodb_flush_log_at_trx_commit = 1
+
+skip-name-resolve
