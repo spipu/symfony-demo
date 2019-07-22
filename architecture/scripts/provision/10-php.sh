@@ -39,5 +39,5 @@ mkdir -p /etc/${PHP_FOLDER}/apache2/conf.d/
 rm -f /etc/${PHP_FOLDER}/cli/conf.d/99-provision.ini
 rm -f /etc/${PHP_FOLDER}/apache2/conf.d/99-provision.ini
 
-ln -s $CONFIG_FOLDER/php/cli.ini    /etc/${PHP_FOLDER}/cli/conf.d/99-provision.ini
-ln -s $CONFIG_FOLDER/php/apache.ini /etc/${PHP_FOLDER}/apache2/conf.d/99-provision.ini
+cp $CONFIG_FOLDER/php/cli.ini    /etc/${PHP_FOLDER}/cli/conf.d/99-provision.ini
+cp $CONFIG_FOLDER/php/apache.ini /etc/${PHP_FOLDER}/apache2/conf.d/99-provision.ini

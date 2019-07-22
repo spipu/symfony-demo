@@ -7,7 +7,7 @@ apt-get -qq -y install mysql-client mysql-server > /dev/null
 echo " > MySQL - Configure"
 
 rm -f /etc/mysql/mysql.conf.d/provision.cnf
-ln -s $CONFIG_FOLDER/mysql/mysql.cnf /etc/mysql/mysql.conf.d/provision.cnf
+cp $CONFIG_FOLDER/mysql/mysql.cnf /etc/mysql/mysql.conf.d/provision.cnf
 
 echo " > MySQL - Service"
 
