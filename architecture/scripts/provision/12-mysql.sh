@@ -2,11 +2,12 @@
 
 echo " > MySQL - Install"
 
-apt-get -qq -y install mysql-server > /dev/null
+apt-get -qq -y install mysql-client mysql-server > /dev/null
 
 echo " > MySQL - Configure"
 
-ln -s $CONFIG_FOLDER/mysql/mysql.cnf /etc/mysql/conf.d/99-provision.cnf
+rm -f /etc/mysql/mysql.conf.d/provision.cnf
+ln -s $CONFIG_FOLDER/mysql/mysql.cnf /etc/mysql/mysql.conf.d/provision.cnf
 
 echo " > MySQL - Service"
 

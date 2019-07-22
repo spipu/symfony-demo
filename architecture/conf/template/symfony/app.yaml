@@ -1,5 +1,5 @@
 parameters:
-  APP_SETTINGS_APP_ENV:             'dev'
+  APP_SETTINGS_APP_ENV:             '{{ENV_MODE}}'
   APP_SETTINGS_APP_SECRET:          'ce96b39e4a36d3541ec8b232186267ee'
   APP_SETTINGS_DATABASE_URL:        'mysql://{{ENV_NAME}}:!{{ENV_NAME}}@localhost:3306/{{ENV_NAME}}'
   APP_SETTINGS_MAILER_URL:          'smtp://127.0.0.1:1025?encryption=&auth_mode='

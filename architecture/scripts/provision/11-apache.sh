@@ -14,12 +14,16 @@ echo " > Apache - Configure"
 a2enmod rewrite > /dev/null
 a2enmod headers > /dev/null
 
-echo "ServerName $ENV_HOST" >> /etc/apache2/apache2.conf
+if ! grep "$ENV_NAME" /etc/apache2/apache2.conf > /dev/null; then
+    echo "# Added by $ENV_NAME Provisioning" >> /etc/apache2/apache2.conf
+    echo "ServerName $ENV_HOST"            >> /etc/apache2/apache2.conf
+fi
 
 rm -f /etc/apache2/sites-available/*
 cp $CONFIG_FOLDER/apache/virtualhost.conf   /etc/apache2/sites-available/$ENV_NAME.conf
 sed -i "s/{{ENV_NAME}}/$ENV_NAME/g"         /etc/apache2/sites-available/$ENV_NAME.conf
 sed -i "s/{{ENV_HOST}}/$ENV_HOST/g"         /etc/apache2/sites-available/$ENV_NAME.conf
+sed -i "s/{{ENV_MODE}}/$ENV_MODE/g"         /etc/apache2/sites-available/$ENV_NAME.conf
 sed -i "s/{{ENV_FOLDER}}/$ENV_FOLDER_SED/g" /etc/apache2/sites-available/$ENV_NAME.conf
 sed -i "s/{{WEB_FOLDER}}/$WEB_FOLDER/g"     /etc/apache2/sites-available/$ENV_NAME.conf
 

@@ -19,4 +19,5 @@ yarn run encore dev
 ./bin/console spipu:assets:install --no-interaction
 ./bin/console spipu:fixtures:load
 
-rm -rf ./var/cache/*
+rm -rf ./var/* > /dev/null
+sudo -u www-data rm -rf ./var/* > /dev/null

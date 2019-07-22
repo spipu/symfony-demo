@@ -4,6 +4,7 @@
 ENV_NAME="symfonydemo"
 ENV_HOST="${ENV_NAME}.lxc"
 ENV_SSH_PORT="22"
+ENV_MODE="dev"
 ENV_USER=""
 ENV_FOLDER="/var/www/$ENV_NAME"
 WEB_FOLDER="website"
@@ -38,7 +39,7 @@ if [[ "${ENV_TYPE}" != "none" ]]; then
     # Build the VM folder automatically
     if [[ -z "${ENV_DO_NOT_GENERATE}" ]]; then
         rm -rf ./architecture/vm
-        cp -r  ./architecture/conf/dev/vm ./architecture/vm
+        cp -r  ./architecture/conf/template/vm ./architecture/vm
 
         FILES=`find ./architecture/vm/ -type f`
         for FILE in ${FILES}

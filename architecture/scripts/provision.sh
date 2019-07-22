@@ -4,14 +4,14 @@ cd "$( dirname "${BASH_SOURCE[0]}" )"
 cd ../../
 
 if [[ ! "$1" ]]; then
-    echo "ERROR - You must provide a env_type parameter: lxd|lxc|docker"
+    echo "ERROR - You must provide a env_type parameter: lxd|lxc|docker|prod"
     exit 1
 fi
 ENV_TYPE="$1"
 ENV_DO_NOT_GENERATE="yes"
 source ./architecture/conf/env.sh
 
-CONFIG_FOLDER="$ENV_FOLDER/architecture/conf/dev"
+CONFIG_FOLDER="$ENV_FOLDER/architecture/conf/template"
 
 
 echo "Provisioning for [$ENV_TYPE]"
@@ -31,7 +31,10 @@ source ./architecture/scripts/provision/13-redis.sh
 source ./architecture/scripts/provision/20-composer.sh
 source ./architecture/scripts/provision/21-npm.sh
 source ./architecture/scripts/provision/22-yarn.sh
-source ./architecture/scripts/provision/23-maildev.sh
+if [[ "${ENV_MODE}" == "dev" ]]; then
+    source ./architecture/scripts/provision/23-maildev.sh
+fi
 source ./architecture/scripts/provision/30-symfony.sh
+source ./architecture/scripts/provision/40-project.sh
 
 export DEBIAN_FRONTEND=dialog

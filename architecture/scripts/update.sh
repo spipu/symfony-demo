@@ -15,4 +15,5 @@ composer install
 ./bin/console assets:install --no-interaction
 ./bin/console spipu:assets:install --no-interaction
 
-rm -rf ./var/cache/*
+sudo -u www-data rm -rf ./website/var/* > /dev/null 2>&1
+rm -rf ./website/var/* > /dev/null 2>&1
