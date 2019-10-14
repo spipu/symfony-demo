@@ -3,18 +3,19 @@ imports:
     - { resource: /etc/symfony/symfonydemo.yaml, ignore_errors: true  }
 
 parameters:
-    APP_SETTINGS_REDIS_CACHE_URL:   'redis://%APP_SETTINGS_REDIS_CACHE_HOST%:%APP_SETTINGS_REDIS_CACHE_PORT%/%APP_SETTINGS_REDIS_CACHE_DB%'
-    APP_SETTINGS_REDIS_SESSION_URL: 'redis://%APP_SETTINGS_REDIS_SESSION_HOST%:%APP_SETTINGS_REDIS_SESSION_PORT%/%APP_SETTINGS_REDIS_SESSION_DB%'
+    APP_SETTINGS_REDIS_CACHE_URL:   "redis://%APP_SETTINGS_REDIS_CACHE_HOST%:%APP_SETTINGS_REDIS_CACHE_PORT%/%APP_SETTINGS_REDIS_CACHE_DB%"
+    APP_SETTINGS_REDIS_SESSION_URL: "redis://%APP_SETTINGS_REDIS_SESSION_HOST%:%APP_SETTINGS_REDIS_SESSION_PORT%/%APP_SETTINGS_REDIS_SESSION_DB%"
 
 framework:
     secret: '%APP_SETTINGS_APP_SECRET%'
+    #default_locale: en
     #csrf_protection: true
     #http_method_override: true
 
     # Enables session support. Note that the session will ONLY be started if you read or write from it.
     # Remove or comment this section to explicitly disable session support.
     session:
-        handler_id: ~
+        handler_id: 'app.session.handler'
         cookie_secure: auto
         cookie_samesite: lax
 
@@ -22,3 +23,8 @@ framework:
     #fragments: true
     php_errors:
         log: true
+
+    cache:
+        prefix_seed: "demo"
+        app: "%APP_SETTINGS_CACHE_APP%"
+        default_redis_provider: "%APP_SETTINGS_REDIS_CACHE_URL%"

@@ -24,6 +24,7 @@ export LC_ALL=C
 
 source ./architecture/scripts/provision/00-upgrade.sh
 source ./architecture/scripts/provision/01-packages.sh
+source ./architecture/scripts/provision/02-ssl.sh
 source ./architecture/scripts/provision/10-php.sh
 source ./architecture/scripts/provision/11-apache.sh
 source ./architecture/scripts/provision/12-mysql.sh

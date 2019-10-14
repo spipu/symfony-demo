@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM debian:10
 
 ARG ssh_pub_key
 

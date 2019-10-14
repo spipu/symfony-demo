@@ -5,9 +5,18 @@ ENV_NAME="symfonydemo"
 ENV_HOST="${ENV_NAME}.lxc"
 ENV_SSH_PORT="22"
 ENV_MODE="dev"
+ENV_CODE="dev"
 ENV_USER=""
 ENV_FOLDER="/var/www/$ENV_NAME"
 WEB_FOLDER="website"
+
+# MySQL
+DB_NAME="$ENV_NAME"
+DB_USER="$ENV_NAME"
+DB_PASS="$ENV_NAME"
+
+# Symfony
+APP_SECRET="ce96b39e4a36d3541ec8b232186267ee"
 
 # Local Parameters (for docker, because it can depend on the host OS)
 LOCAL_FILE="./architecture/conf/env.local.sh"
@@ -48,6 +57,7 @@ if [[ "${ENV_TYPE}" != "none" ]]; then
             sed -i "s/{{ENV_USER}}/${ENV_USER}/g"           ${FILE}
             sed -i "s/{{ENV_DOCKER_IP}}/${ENV_DOCKER_IP}/g" ${FILE}
             sed -i "s/{{ENV_DOCKER_PORT_HTTP}}/$(($ENV_DOCKER_PORT_START+80))/g"      ${FILE}
+            sed -i "s/{{ENV_DOCKER_PORT_HTTPS}}/$(($ENV_DOCKER_PORT_START+443))/g"    ${FILE}
             sed -i "s/{{ENV_DOCKER_PORT_SSH}}/$(($ENV_DOCKER_PORT_START+22))/g"       ${FILE}
             sed -i "s/{{ENV_DOCKER_PORT_MAILDEV}}/$(($ENV_DOCKER_PORT_START+1080))/g" ${FILE}
         done

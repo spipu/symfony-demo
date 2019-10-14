@@ -3,7 +3,8 @@
 echo " > Packages - Install"
 
 apt-get -qq -y install \
-    sudo lsb-release inetutils-ping curl vim aptitude ca-certificates bash-completion \
-    less lsof moreutils patch rsync net-tools screen ssl-cert strace tcpdump telnet \
-    file unzip ntp acpid iotop dstat apt-transport-https tar wget zip \
+    lsb-release gnupg inetutils-ping curl vim aptitude ca-certificates bash-completion \
+    less lsof moreutils rsync net-tools screen strace tcpdump telnet \
+    file unzip ntp acpid iotop dstat apt-transport-https tar wget zip bzip2 \
+    sudo ssl-cert openssl \
     > /dev/null

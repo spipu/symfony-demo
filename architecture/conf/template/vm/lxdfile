@@ -1,5 +1,5 @@
 name={{ENV_NAME}}
-template=ubuntu-18_04-bionic
+template=debian-10-buster
 host={{ENV_NAME}}.lxc
 delivery-user={{ENV_USER}}
 mount=./../../:/var/www/{{ENV_NAME}}

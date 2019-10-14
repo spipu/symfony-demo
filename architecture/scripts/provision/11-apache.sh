@@ -2,21 +2,23 @@
 
 echo " > Apache - Install"
 
-PHP_VERSION="7.2"
-
 apt-get -qq -y install \
     apache2 \
     libapache2-mod-xsendfile \
-    libapache2-mod-php${PHP_VERSION} \
      > /dev/null
 
 echo " > Apache - Configure"
-a2enmod rewrite > /dev/null
-a2enmod headers > /dev/null
+a2enmod deflate    > /dev/null
+a2enmod expires    > /dev/null
+a2enmod headers    > /dev/null
+a2enmod proxy_fcgi > /dev/null
+a2enmod remoteip   > /dev/null
+a2enmod rewrite    > /dev/null
+a2enmod ssl        > /dev/null
 
 if ! grep "$ENV_NAME" /etc/apache2/apache2.conf > /dev/null; then
     echo "# Added by $ENV_NAME Provisioning" >> /etc/apache2/apache2.conf
-    echo "ServerName $ENV_HOST"            >> /etc/apache2/apache2.conf
+    echo "ServerName $ENV_HOST"              >> /etc/apache2/apache2.conf
 fi
 
 rm -f /etc/apache2/sites-available/*

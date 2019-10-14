@@ -22,4 +22,8 @@ echo "[${HOUR}]===[INSTALL]==="
 ssh ${ENV_USER}@${ENV_HOST} -p ${ENV_SSH_PORT} $ENV_FOLDER/architecture/scripts/install.sh
 
 HOUR=$(date +%H:%M:%S)
+echo "[${HOUR}]===[RESTART HOST APACHE]==="
+sudo systemctl restart apache2
+
+HOUR=$(date +%H:%M:%S)
 echo "[${HOUR}]===[FINISHED]==="

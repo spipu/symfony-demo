@@ -11,9 +11,11 @@ cd ${ENV_FOLDER}/${WEB_FOLDER}
 
 composer install
 
-./bin/console doctrine:schema:update --force
-./bin/console assets:install --no-interaction
-./bin/console spipu:assets:install --no-interaction
+redis-cli -p 6379 flushall
 
-sudo -u www-data rm -rf ./website/var/* > /dev/null 2>&1
-rm -rf ./website/var/* > /dev/null 2>&1
+./bin/console doctrine:schema:update --force
+
+rm -rf ./var/* > /dev/null 2>&1
+sudo -u www-data rm -rf ./var/* > /dev/null 2>&1
+
+sudo -u www-data ./bin/console spipu:fixtures:load

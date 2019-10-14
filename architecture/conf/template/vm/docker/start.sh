@@ -8,6 +8,10 @@ echo "Starting Service - Apache2"
 /etc/init.d/apache2 start > /dev/null
 echo ""
 
+echo "Starting Service - PHP-FPM"
+/etc/init.d/php7.3-fpm start  > /dev/null
+echo ""
+
 echo "Starting Service - MySQL"
 /etc/init.d/mysql   start > /dev/null
 echo ""

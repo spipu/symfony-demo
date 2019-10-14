@@ -12,6 +12,27 @@ services:
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
         public: false       # Allows optimizing the container by removing unused services
 
+    # Redis Client - Cache
+    app.cache.redis.client:
+        class: 'Predis\Client'
+        public: true
+        arguments:
+            - "%APP_SETTINGS_REDIS_CACHE_URL%"
+
+    # Redis Client - Session
+    app.session.redis.client:
+        class: 'Predis\Client'
+        public: true
+        arguments:
+            - "%APP_SETTINGS_REDIS_SESSION_URL%"
+
+    # Redis Session Configuration
+    app.session.handler:
+        class: Symfony\Component\HttpFoundation\Session\Storage\Handler\RedisSessionHandler
+        arguments:
+            - '@app.session.redis.client'
+            - prefix: 'demo_'
+
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
     App\:

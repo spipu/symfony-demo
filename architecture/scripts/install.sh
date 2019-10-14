@@ -14,10 +14,11 @@ composer install
 yarn install
 yarn run encore dev
 
-./bin/console doctrine:schema:update --force
-./bin/console assets:install --no-interaction
-./bin/console spipu:assets:install --no-interaction
-./bin/console spipu:fixtures:load
+redis-cli -p 6379 flushall
 
-rm -rf ./var/* > /dev/null
-sudo -u www-data rm -rf ./var/* > /dev/null
+./bin/console doctrine:schema:update --force
+
+rm -rf ./var/* > /dev/null 2>&1
+sudo -u www-data rm -rf ./var/* > /dev/null 2>&1
+
+sudo -u www-data ./bin/console spipu:fixtures:load
