@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echo " > Project - Configure"
+showMessage " > Project - Configure"
 
 # You can add some specific commands for your project

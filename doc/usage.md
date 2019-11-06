@@ -1,7 +1,14 @@
 # Usage
 
 ## Dev Environment
- 
+
+| Site | Url | Comment |
+|------|-----|---------|
+| Web     | https://symfonydemo.lxc/     | Personal account must be used for log-in | 
+| MailDev | http://symfonydemo.lxc:1080/ |  |
+
+You can use LXC, LXD, or Docker technology.
+
 ### LXC
 
 ```bash
@@ -44,3 +51,11 @@ If needed, you can create the file `architecture/conf/env.local.sh` and put the 
 ENV_DOCKER_IP="127.0.0.1"
 ENV_DOCKER_PORT_START="20000"
 ```
+
+On windows, use the following script to create the env:
+
+```bash
+./architecture/create-docker.ps1
+```
+
+Then, use `docker-compose` in the `./architecture/vm/` folder to up, down, start, stop your container.

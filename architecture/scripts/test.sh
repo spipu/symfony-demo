@@ -1,29 +1,31 @@
 #!/bin/bash
 
-cd "$( dirname "${BASH_SOURCE[0]}" )"
+set -e
+
+bashSource=$(readlink -f "${BASH_SOURCE[0]}")
+cd "$(dirname "$bashSource")"
 cd ../../
 
-ENV_TYPE="none"
 ENV_DO_NOT_GENERATE="yes"
-source ./architecture/conf/env.sh
+source ./architecture/scripts/include/init.sh
 
-echo "Test Services"
+showTitle "Test Services"
 
-echo " => PHP"
+showMessage " => PHP"
 php -v | grep cli
 echo ""
 
-echo " => MySQL"
+showMessage " => MySQL"
 export MYSQL_PWD=$DB_PASS
 mysql -h localhost -P 3306 -u $DB_USER $DB_NAME -N -e "SHOW DATABASES like \"$DB_NAME\";"
 echo ""
 
-echo " => Redis - Cache"
+showMessage " => Redis - Cache"
 redis-cli -h localhost -p 6379 ping
 echo ""
 
-echo " => Redis - Session"
+showMessage " => Redis - Session"
 redis-cli -h localhost -p 6380 ping
 echo ""
 
-echo "Finished"
+showMessage "Finished"

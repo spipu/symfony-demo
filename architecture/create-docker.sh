@@ -1,10 +1,13 @@
 #!/bin/bash
 
-cd "$( dirname "${BASH_SOURCE[0]}" )"
+set -e
+
+bashSource=$(readlink -f "${BASH_SOURCE[0]}")
+cd "$(dirname "$bashSource")"
 cd ../
 
 ENV_TYPE="docker"
-source ./architecture/conf/env.sh
+source ./architecture/scripts/include/init.sh
 
 SSH_PUB=$(cat ~/.ssh/id_rsa.pub)
 
@@ -19,7 +22,7 @@ ssh-keygen -R "${ENV_IP}"   > /dev/null
 echo " => Prepare /etc/hosts file"
 sudo sed "/${ENV_HOST}/d" -i /etc/hosts
 echo "# Added for docker ${ENV_HOST}" | sudo tee -a /etc/hosts > /dev/null
-echo "${ENV_IP} ${ENV_HOST}"         | sudo tee -a /etc/hosts > /dev/null
+echo "${ENV_IP} ${ENV_HOST}"          | sudo tee -a /etc/hosts > /dev/null
 
 echo " => Docker"
 sudo docker-compose down -v

@@ -1,71 +1,74 @@
 #!/usr/bin/env bash
 
-cd "$( dirname "${BASH_SOURCE[0]}" )"
+set -e
+
+bashSource=$(readlink -f "${BASH_SOURCE[0]}")
+cd "$(dirname "$bashSource")"
 cd ../
 
 ENV_TYPE="none"
-source ./architecture/conf/env.sh
+source ./architecture/scripts/include/init.sh
 
 PROJECT_NAME="${ENV_NAME}"
-FOLDER_PROJECT="./${WEB_FOLDER}"
+PROJECT_FOLDER="./${WEB_FOLDER}"
 
 echo "Create the project"
-composer create-project symfony/website-skeleton    ${FOLDER_PROJECT} --ignore-platform-reqs --no-install
+composer create-project symfony/website-skeleton    ${PROJECT_FOLDER} --ignore-platform-reqs --no-install
 echo ""
 
 echo "Configure Composer"
-composer config platform.php            "7.2.19" -d ${FOLDER_PROJECT}
-composer config platform.ext-bcmath     "1"      -d ${FOLDER_PROJECT}
-composer config platform.ext-ctype      "1"      -d ${FOLDER_PROJECT}
-composer config platform.ext-gd         "1"      -d ${FOLDER_PROJECT}
-composer config platform.ext-spl        "1"      -d ${FOLDER_PROJECT}
-composer config platform.ext-dom        "1"      -d ${FOLDER_PROJECT}
-composer config platform.ext-simplexml  "1"      -d ${FOLDER_PROJECT}
-composer config platform.ext-mcrypt     "1"      -d ${FOLDER_PROJECT}
-composer config platform.ext-hash       "1"      -d ${FOLDER_PROJECT}
-composer config platform.ext-curl       "1"      -d ${FOLDER_PROJECT}
-composer config platform.ext-iconv      "1"      -d ${FOLDER_PROJECT}
-composer config platform.ext-intl       "1"      -d ${FOLDER_PROJECT}
-composer config platform.ext-xsl        "1"      -d ${FOLDER_PROJECT}
-composer config platform.ext-mbstring   "1"      -d ${FOLDER_PROJECT}
-composer config platform.ext-openssl    "1"      -d ${FOLDER_PROJECT}
-composer config platform.ext-zip        "1"      -d ${FOLDER_PROJECT}
-composer config platform.ext-pdo_mysql  "1"      -d ${FOLDER_PROJECT}
-composer config platform.ext-soap       "1"      -d ${FOLDER_PROJECT}
-composer config platform.lib-libxml     "1"      -d ${FOLDER_PROJECT}
+composer config platform.php            "7.2.19" -d ${PROJECT_FOLDER}
+composer config platform.ext-bcmath     "1"      -d ${PROJECT_FOLDER}
+composer config platform.ext-ctype      "1"      -d ${PROJECT_FOLDER}
+composer config platform.ext-gd         "1"      -d ${PROJECT_FOLDER}
+composer config platform.ext-spl        "1"      -d ${PROJECT_FOLDER}
+composer config platform.ext-dom        "1"      -d ${PROJECT_FOLDER}
+composer config platform.ext-simplexml  "1"      -d ${PROJECT_FOLDER}
+composer config platform.ext-mcrypt     "1"      -d ${PROJECT_FOLDER}
+composer config platform.ext-hash       "1"      -d ${PROJECT_FOLDER}
+composer config platform.ext-curl       "1"      -d ${PROJECT_FOLDER}
+composer config platform.ext-iconv      "1"      -d ${PROJECT_FOLDER}
+composer config platform.ext-intl       "1"      -d ${PROJECT_FOLDER}
+composer config platform.ext-xsl        "1"      -d ${PROJECT_FOLDER}
+composer config platform.ext-mbstring   "1"      -d ${PROJECT_FOLDER}
+composer config platform.ext-openssl    "1"      -d ${PROJECT_FOLDER}
+composer config platform.ext-zip        "1"      -d ${PROJECT_FOLDER}
+composer config platform.ext-pdo_mysql  "1"      -d ${PROJECT_FOLDER}
+composer config platform.ext-soap       "1"      -d ${PROJECT_FOLDER}
+composer config platform.lib-libxml     "1"      -d ${PROJECT_FOLDER}
 echo ""
 
 echo "Install the packages"
-composer install --no-interaction                -d ${FOLDER_PROJECT}
-chmod +x ${FOLDER_PROJECT}/bin/*
+composer install --no-interaction                -d ${PROJECT_FOLDER}
+chmod +x ${PROJECT_FOLDER}/bin/*
 echo ""
 
 echo "Add useful Packages"
-composer require       sensiolabs/security-checker      -d ${FOLDER_PROJECT} --no-update
-composer remove        symfony/dotenv                   -d ${FOLDER_PROJECT} --no-update
-composer remove  --dev symfony/test-pack                -d ${FOLDER_PROJECT} --no-update
-composer remove  --dev symfony/web-server-bundle        -d ${FOLDER_PROJECT} --no-update
-composer require --dev symfony/dotenv                   -d ${FOLDER_PROJECT} --no-update
-composer require --dev symfony/browser-kit:*            -d ${FOLDER_PROJECT} --no-update
-composer require --dev symfony/css-selector:*           -d ${FOLDER_PROJECT} --no-update
-composer require --dev edgedesign/phpqa                 -d ${FOLDER_PROJECT} --no-update
-composer require --dev jakub-onderka/php-parallel-lint  -d ${FOLDER_PROJECT} --no-update
-composer require --dev pdepend/pdepend                  -d ${FOLDER_PROJECT} --no-update
-composer require --dev phpmd/phpmd                      -d ${FOLDER_PROJECT} --no-update
-composer require --dev phpmetrics/phpmetrics            -d ${FOLDER_PROJECT} --no-update
-composer require --dev phpunit/phpunit                  -d ${FOLDER_PROJECT} --no-update
-composer require --dev squizlabs/php_codesniffer        -d ${FOLDER_PROJECT} --no-update
-composer update  --no-interaction                       -d ${FOLDER_PROJECT}
+composer require       sensiolabs/security-checker      -d ${PROJECT_FOLDER} --no-update
+composer remove        symfony/dotenv                   -d ${PROJECT_FOLDER} --no-update
+composer remove  --dev symfony/test-pack                -d ${PROJECT_FOLDER} --no-update
+composer remove  --dev symfony/web-server-bundle        -d ${PROJECT_FOLDER} --no-update
+composer require --dev symfony/dotenv                   -d ${PROJECT_FOLDER} --no-update
+composer require --dev symfony/browser-kit:*            -d ${PROJECT_FOLDER} --no-update
+composer require --dev symfony/css-selector:*           -d ${PROJECT_FOLDER} --no-update
+composer require --dev edgedesign/phpqa                 -d ${PROJECT_FOLDER} --no-update
+composer require --dev jakub-onderka/php-parallel-lint  -d ${PROJECT_FOLDER} --no-update
+composer require --dev pdepend/pdepend                  -d ${PROJECT_FOLDER} --no-update
+composer require --dev phpmd/phpmd                      -d ${PROJECT_FOLDER} --no-update
+composer require --dev phpmetrics/phpmetrics            -d ${PROJECT_FOLDER} --no-update
+composer require --dev phpunit/phpunit                  -d ${PROJECT_FOLDER} --no-update
+composer require --dev squizlabs/php_codesniffer        -d ${PROJECT_FOLDER} --no-update
+composer update  --no-interaction                       -d ${PROJECT_FOLDER}
 echo ""
 
 echo "Remove Useless Files"
-rm -f ${FOLDER_PROJECT}/.env
-rm -f ${FOLDER_PROJECT}/.env.dist
-rm -f ${FOLDER_PROJECT}/.env.test
+rm -f ${PROJECT_FOLDER}/.env
+rm -f ${PROJECT_FOLDER}/.env.dist
+rm -f ${PROJECT_FOLDER}/.env.test
 echo ""
 
 echo "Configure Symfony"
-FOLDER_CONFIG="${FOLDER_PROJECT}/config/"
+FOLDER_CONFIG="${PROJECT_FOLDER}/config/"
 
 FILE_CONFIG="${FOLDER_CONFIG}packages/framework.yaml"
 echo "imports:
@@ -100,18 +103,18 @@ do
     sed -i "s/%env([^:]*:*\([^:]*\))%/%APP_SETTINGS_\1%/g" ${FILE}
 done
 
-rm -f ${FOLDER_PROJECT}/phpunit.xml.dist
+rm -f ${PROJECT_FOLDER}/phpunit.xml.dist
 
-echo "<?php return [];" > ${FOLDER_PROJECT}/.env.local.php
+echo "<?php return [];" > ${PROJECT_FOLDER}/.env.local.php
 
-sed -i '/phpunit/d'           ${FOLDER_PROJECT}/.gitignore
-sed -i '/\.env\.local\.php/d' ${FOLDER_PROJECT}/.gitignore
+sed -i '/phpunit/d'           ${PROJECT_FOLDER}/.gitignore
+sed -i '/\.env\.local\.php/d' ${PROJECT_FOLDER}/.gitignore
 
 echo "###> ${PROJECT_NAME}
 /node_modules/
 /public/media/
 ###< ${PROJECT_NAME}
 
-$(cat ${FOLDER_PROJECT}/.gitignore)" > ${FOLDER_PROJECT}/.gitignore
+$(cat ${PROJECT_FOLDER}/.gitignore)" > ${PROJECT_FOLDER}/.gitignore
 
 echo ""

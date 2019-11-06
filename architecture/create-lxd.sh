@@ -1,10 +1,13 @@
 #!/bin/bash
 
-cd "$( dirname "${BASH_SOURCE[0]}" )"
+set -e
+
+bashSource=$(readlink -f "${BASH_SOURCE[0]}")
+cd "$(dirname "$bashSource")"
 cd ../
 
 ENV_TYPE="lxd"
-source ./architecture/conf/env.sh
+source ./architecture/scripts/include/init.sh
 
 cd ./architecture/vm/
 

@@ -1,24 +1,23 @@
 #!/bin/bash
 
-echo " > MySQL - Perconna Repo"
+showMessage " > MySQL - Perconna Repo"
 
 wget -q https://repo.percona.com/apt/percona-release_latest.$(lsb_release -sc)_all.deb > /dev/null
 dpkg -i percona-release_latest.$(lsb_release -sc)_all.deb > /dev/null
 rm   -f percona-release_latest.$(lsb_release -sc)_all.deb
 apt-get -qq update > /dev/null
 
-echo " > MySQL - Perconna Install"
+showMessage " > MySQL - Perconna Install"
 
 apt-get -qq -y install percona-server-server-5.7 > /dev/null
 
-echo " > MySQL - Configure"
+showMessage " > MySQL - Configure"
 
 mkdir -p /var/log/mysql
 mkdir -p /etc/mysql/percona-server.conf.d
-rm    -f /etc/mysql/percona-server.conf.d/provision.cnf
-cp $CONFIG_FOLDER/mysql/mysql.cnf /etc/mysql/percona-server.conf.d/provision.cnf
+createFromTemplate "$CONFIG_FOLDER/mysql/mysql.cnf" "/etc/mysql/percona-server.conf.d/provision.cnf"
 
-echo " > MySQL - Service"
+showMessage " > MySQL - Service"
 
 if [[ "$ENV_TYPE" = "docker" ]]; then
     /etc/init.d/mysql stop   > /dev/null

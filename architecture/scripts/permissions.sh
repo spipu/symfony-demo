@@ -1,20 +1,22 @@
 #!/bin/bash
 
-cd "$( dirname "${BASH_SOURCE[0]}" )"
+set -e
+
+bashSource=$(readlink -f "${BASH_SOURCE[0]}")
+cd "$(dirname "$bashSource")"
 cd ../../
 
-ENV_TYPE="none"
 ENV_DO_NOT_GENERATE="yes"
-source ./architecture/conf/env.sh
+source ./architecture/scripts/include/init.sh
 
-MAIN_FOLDER="${ENV_FOLDER}/${WEB_FOLDER}"
+showTitle "Permissions"
 
 mkdir -p ${MAIN_FOLDER}/var
 chown -R www-data.www-data ${MAIN_FOLDER}/var
 chmod -R 666 ${MAIN_FOLDER}/var
 chmod -R +X ${MAIN_FOLDER}/var
 
-chmod +X ${MAIN_FOLDER}/bin/*
+chmod +x ${MAIN_FOLDER}/bin/*
 
 rm -rf   ${MAIN_FOLDER}/public/media/config > /dev/null
 mkdir -p ${MAIN_FOLDER}/public/media/config
