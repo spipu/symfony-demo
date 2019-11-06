@@ -4,7 +4,7 @@
     "license": "MIT",
     "description": "A demo to test bundles",
     "require": {
-        "php": "^7.3",
+        "php": "^7.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "predis/predis": "^1.1",
@@ -56,7 +56,7 @@
         },
         "sort-packages": true,
         "platform": {
-            "php": "7.3.9",
+            "php": "7.2.24",
             "ext-bcmath": "1",
             "ext-ctype": "1",
             "ext-gd": "1",
