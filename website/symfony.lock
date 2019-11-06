@@ -1,7 +1,4 @@
 {
-    "components/jquery": {
-        "version": "3.3.1"
-    },
     "consolidation/annotated-command": {
         "version": "2.12.0"
     },
@@ -448,6 +445,18 @@
     },
     "symfony/intl": {
         "version": "v4.3.2"
+    },
+    "symfony/mailer": {
+        "version": "4.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.3",
+            "ref": "6e5921f710bec05533f664e0b9a3d838545edd82"
+        },
+        "files": [
+            "config/packages/mailer.yaml"
+        ]
     },
     "symfony/maker-bundle": {
         "version": "1.0",
