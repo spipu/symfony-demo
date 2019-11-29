@@ -1,12 +1,12 @@
 security:
     encoders:
-        Spipu\UserBundle\Entity\User:
+        App\Entity\User:
             algorithm: auto
 
     providers:
         spipu_users:
             entity:
-                class: Spipu\UserBundle\Entity\User
+                class: App\Entity\User
 
     firewalls:
         dev:

@@ -11,13 +11,8 @@ doctrine:
         url: '%APP_SETTINGS_DATABASE_URL%'
     orm:
         auto_generate_proxy_classes: true
-        naming_strategy: doctrine.orm.naming_strategy.underscore
+        naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
         auto_mapping: true
-        metadata_cache_driver:
-            type: 'redis'
-            host: '%APP_SETTINGS_REDIS_CACHE_HOST%'
-            port: '%APP_SETTINGS_REDIS_CACHE_PORT%'
-            database: '%APP_SETTINGS_REDIS_CACHE_DB%'
         mappings:
             App:
                 is_bundle: false

@@ -23,8 +23,3 @@ framework:
     #fragments: true
     php_errors:
         log: true
-
-    cache:
-        prefix_seed: "demo"
-        app: "%APP_SETTINGS_CACHE_APP%"
-        default_redis_provider: "%APP_SETTINGS_REDIS_CACHE_URL%"

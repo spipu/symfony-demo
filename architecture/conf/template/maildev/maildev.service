@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart={{MAILDEV_BIN}}
+ExecStart={{MAILDEV_BIN}} --hide-extensions STARTTLS
 Restart=always
 RestartSec=1
 

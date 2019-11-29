@@ -53,3 +53,13 @@ services:
         class: 'App\Service\MenuDefinition'
         arguments:
             - '@Spipu\ConfigurationBundle\Service\Manager'
+
+    # Spipu User Bundle Configuration
+    Spipu\UserBundle\Service\ModuleConfigurationInterface:
+        class: Spipu\UserBundle\Service\ModuleConfiguration
+        public: true
+        arguments:
+            - 'App:User'
+            - '\App\Entity\User'
+            - true
+            - true

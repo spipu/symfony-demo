@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 DAEMON="{{MAILDEV_BIN}}"
-daemon_OPT=""
+daemon_OPT="--hide-extensions STARTTLS"
 DAEMONUSER="root"
 daemon_NAME="maildev"
 
