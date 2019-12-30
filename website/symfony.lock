@@ -1,4 +1,7 @@
 {
+    "composer/xdebug-handler": {
+        "version": "1.4.0"
+    },
     "consolidation/annotated-command": {
         "version": "2.12.0"
     },
