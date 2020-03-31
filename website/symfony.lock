@@ -385,6 +385,9 @@
     "symfony/dotenv": {
         "version": "v4.3.2"
     },
+    "symfony/error-handler": {
+        "version": "v4.4.7"
+    },
     "symfony/event-dispatcher": {
         "version": "v4.3.2"
     },
@@ -624,6 +627,9 @@
             "templates/base.html.twig"
         ]
     },
+    "symfony/twig-pack": {
+        "version": "v1.0.0"
+    },
     "symfony/validator": {
         "version": "4.3",
         "recipe": {
@@ -671,6 +677,9 @@
     },
     "twbs/bootstrap": {
         "version": "v4.3.1"
+    },
+    "twig/extra-bundle": {
+        "version": "v3.0.3"
     },
     "twig/twig": {
         "version": "v2.11.3"

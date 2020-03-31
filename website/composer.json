@@ -46,7 +46,6 @@
         "symfony/debug-pack": "*",
         "symfony/dotenv": "*",
         "symfony/maker-bundle": "*",
-        "symfony/phpunit-bridge": "^v4.4",
         "symfony/profiler-pack": "*"
     },
     "config": {
