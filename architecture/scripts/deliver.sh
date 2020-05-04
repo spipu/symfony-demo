@@ -19,6 +19,11 @@ fi
 RELEASE_FOLDER=$(date +%Y%m%d_%H%M%S)
 FULL_FOLDER="$ENV_FOLDER/releases/$RELEASE_FOLDER"
 
+# Force Branch to use
+if [[ "$2" ]]; then
+    GIT_BRANCH="$2"
+fi
+
 # Shared Folders Management
 function manageSharedFolder() {
     echo "   - [$1]"
@@ -38,6 +43,8 @@ function manageSharedFolder() {
     ln -s     "$sharedFolder" "$projectFolder"
 }
 
+showMessage "Start"
+
 # Resume
 echo "Project Delivery"
 echo "  url:    $GIT_PROJECT"
@@ -47,7 +54,7 @@ echo ""
 
 # The release folder must not exist
 if [[ -d "$FULL_FOLDER" ]]; then
-    echo "ERROR - Release folder already exists"
+    showError "Release folder already exists"
     exit 1
 fi
 
@@ -59,7 +66,7 @@ echo " => Clone from GIT"
 git clone "$GIT_PROJECT" -q -b "$GIT_BRANCH" "$FULL_FOLDER"
 # The release folder must exist
 if [[ ! -d "$FULL_FOLDER" ]]; then
-    echo "ERROR - Release folder does not exist"
+    showError "Release folder does not exist"
     exit 1
 fi
 
@@ -83,18 +90,33 @@ mkdir -p  "$ENV_FOLDER/shared/public/media/config"
 chmod 775 "$ENV_FOLDER/shared/public/media/config"
 
 echo " => Composer Install"
-composer install -q -n -d "$FULL_FOLDER/website"
+composer install -n -d "$FULL_FOLDER/website"
+if [[ "$?" -ne 0 ]]; then
+  showError "On composer install"
+  exit 1
+fi
 
 echo " => Flush Redis Cache"
 redis-cli -p 6379 flushall > /dev/null
 
 echo " => Schema Update"
 "$FULL_FOLDER/website/bin/console" doctrine:schema:update --force
+if [[ "$?" -ne 0 ]]; then
+  showError "On schema update"
+  exit 1
+fi
 
 echo " => Clean Cache"
 rm -rf "$FULL_FOLDER/website/var/cache" > /dev/null 2>&1
 sudo -u www-data rm -rf "$FULL_FOLDER/website/var/cache" > /dev/null 2>&1
 redis-cli -p 6379 flushall > /dev/null
+
+echo " => Load Fixtures"
+sudo -u www-data "$FULL_FOLDER/website/bin/console" spipu:fixtures:load
+if [[ "$?" -ne 0 ]]; then
+  showError "On load fixtures"
+  exit 1
+fi
 
 echo " => Active"
 rm -f "$ENV_FOLDER/current"
@@ -103,12 +125,9 @@ ln -s "$FULL_FOLDER/website" "$ENV_FOLDER/current"
 echo " => Clean PHP-FPM cache"
 sudo systemctl reload php7.2-fpm.service
 
-echo " => Load Fixtures"
-sudo -u www-data "$FULL_FOLDER/website/bin/console" spipu:fixtures:load
-
 CRONTAB_FILE="$FULL_FOLDER/website/config/crontab"
 if [[ -f "$CRONTAB_FILE" ]]; then
-    echo " => Configure Crontab"
+    echo " => Configure Crontab - www-data"
     remplaceVariablesInFile "$CRONTAB_FILE"
     sudo -u www-data crontab "$CRONTAB_FILE"
 fi
@@ -121,4 +140,4 @@ for RELEASE in ${RELEASES} ; do
     rm -rf "$RELEASE" > /dev/null
 done
 
-echo " => Finished"
+showMessage "Finished"
