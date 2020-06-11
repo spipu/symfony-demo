@@ -16,4 +16,5 @@ return [
     Spipu\UiBundle\SpipuUiBundle::class => ['all' => true],
     Spipu\ConfigurationBundle\SpipuConfigurationBundle::class => ['all' => true],
     Spipu\UserBundle\SpipuUserBundle::class => ['all' => true],
+    Spipu\ProcessBundle\SpipuProcessBundle::class => ['all' => true],
 ];

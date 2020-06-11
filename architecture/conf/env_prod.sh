@@ -17,6 +17,7 @@ PHP_DISPLAY_ERRORS="False"
 SSL_CERT_FOLDER="/etc/website/certs"
 SSL_CERT_PUBLIC="${SSL_CERT_FOLDER}/website.crt"
 SSL_CERT_PRIVATE="${SSL_CERT_FOLDER}/website.key"
+SSL_CERT_CHAIN="${SSL_CERT_FOLDER}/website.chain"
 
 # Apache
 APACHE_PROTECT_ADMIN="xx.xx.xx.xx"

@@ -86,6 +86,7 @@ echo " => Shared Folders"
 manageSharedFolder "public/media"
 manageSharedFolder "var/log"
 manageSharedFolder "var/export"
+manageSharedFolder "var/import"
 mkdir -p  "$ENV_FOLDER/shared/public/media/config"
 chmod 775 "$ENV_FOLDER/shared/public/media/config"
 

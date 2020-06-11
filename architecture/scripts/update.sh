@@ -19,6 +19,8 @@ composer install
 redis-cli -p 6379 flushall
 
 ./bin/console doctrine:schema:update --force
+./bin/console assets:install --symlink --relative
+./bin/console spipu:assets:install
 
 rm -rf ./var/* > /dev/null 2>&1
 sudo -u www-data rm -rf ./var/* > /dev/null 2>&1

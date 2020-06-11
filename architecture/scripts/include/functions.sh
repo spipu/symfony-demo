@@ -64,6 +64,7 @@ function remplaceVariablesInFile() {
     # SSL
     remplaceVariableInFile "$FILE" "SSL_CERT_PUBLIC"  "$SSL_CERT_PUBLIC"
     remplaceVariableInFile "$FILE" "SSL_CERT_PRIVATE" "$SSL_CERT_PRIVATE"
+    remplaceVariableInFile "$FILE" "SSL_CERT_CHAIN"   "$SSL_CERT_CHAIN"
 
     # APACHE
     remplaceVariableInFile "$FILE" "APACHE_PROTECT_ADMIN" "$APACHE_PROTECT_ADMIN"

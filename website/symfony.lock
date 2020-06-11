@@ -105,6 +105,9 @@
     "doctrine/reflection": {
         "version": "v1.0.0"
     },
+    "doctrine/sql-formatter": {
+        "version": "1.1.0"
+    },
     "edgedesign/phpqa": {
         "version": "v1.22.1"
     },
@@ -122,9 +125,6 @@
     },
     "jakub-onderka/php-parallel-lint": {
         "version": "v1.0.0"
-    },
-    "jdorn/sql-formatter": {
-        "version": "v1.2.17"
     },
     "league/container": {
         "version": "2.4.1"
@@ -292,6 +292,9 @@
         "version": "dev-master"
     },
     "spipu/core-bundle": {
+        "version": "dev-master"
+    },
+    "spipu/process-bundle": {
         "version": "dev-master"
     },
     "spipu/ui-bundle": {
@@ -504,6 +507,9 @@
     },
     "symfony/polyfill-php73": {
         "version": "v1.11.0"
+    },
+    "symfony/polyfill-php80": {
+        "version": "v1.17.0"
     },
     "symfony/process": {
         "version": "v4.3.2"

@@ -9,6 +9,7 @@ source ./architecture/scripts/provision/02-upgrade.sh
 source ./architecture/scripts/provision/03-packages.sh
 source ./architecture/scripts/provision/04-ssl-dev.sh
 source ./architecture/scripts/provision/10-php.sh
+source ./architecture/scripts/provision/10-php-dev.sh
 source ./architecture/scripts/provision/11-apache.sh
 source ./architecture/scripts/provision/12-mysql.sh
 source ./architecture/scripts/provision/13-redis.sh

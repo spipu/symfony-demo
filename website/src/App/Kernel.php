@@ -3,6 +3,7 @@
 namespace App;
 
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
+use Symfony\Component\Config\Exception\LoaderLoadException;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\Config\Resource\FileResource;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -15,6 +16,9 @@ class Kernel extends BaseKernel
 
     private const CONFIG_EXTS = '.{php,xml,yaml,yml}';
 
+    /**
+     * @return iterable
+     */
     public function registerBundles(): iterable
     {
         $contents = require $this->getProjectDir().'/config/bundles.php';
@@ -25,11 +29,20 @@ class Kernel extends BaseKernel
         }
     }
 
+    /**
+     * @return string
+     */
     public function getProjectDir(): string
     {
         return \dirname(\dirname(__DIR__));
     }
 
+    /**
+     * @param ContainerBuilder $container
+     * @param LoaderInterface $loader
+     * @return void
+     * @throws \Exception
+     */
     protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader): void
     {
         $container->addResource(new FileResource($this->getProjectDir().'/config/bundles.php'));
@@ -48,6 +61,11 @@ class Kernel extends BaseKernel
         $loader->load($confDir.'/{services}_'.$this->environment.self::CONFIG_EXTS, 'glob');
     }
 
+    /**
+     * @param RouteCollectionBuilder $routes
+     * @return void
+     * @throws LoaderLoadException
+     */
     protected function configureRoutes(RouteCollectionBuilder $routes): void
     {
         $confDir = $this->getProjectDir().'/config';

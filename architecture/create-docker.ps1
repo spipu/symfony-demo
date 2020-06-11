@@ -76,20 +76,8 @@ If (Test-Path ./$WEB_FOLDER/var) {
     Remove-Item -Recurse -Force ./$WEB_FOLDER/var
 }
 
-Write-Output "DOCKER - Provision"
-ssh root@$ENV_HOST -p $ENV_SSH_PORT $ENV_FOLDER/architecture/scripts/provision.sh "$ENV_TYPE"
-
-Write-Output "DOCKER - Create Database"
-ssh root@$ENV_HOST -p $ENV_SSH_PORT $ENV_FOLDER/architecture/scripts/createDb.sh "$ENV_TYPE"
-
-Write-Output "DOCKER - Permission"
-ssh root@$ENV_HOST -p $ENV_SSH_PORT $ENV_FOLDER/architecture/scripts/permissions.sh "$ENV_TYPE"
-
-Write-Output "DOCKER - Test"
-ssh $ENV_USER@$ENV_HOST -p $ENV_SSH_PORT $ENV_FOLDER/architecture/scripts/test.sh "$ENV_TYPE"
-
-Write-Output "DOCKER - Install"
-ssh $ENV_USER@$ENV_HOST -p $ENV_SSH_PORT $ENV_FOLDER/architecture/scripts/install.sh
+Write-Output "DOCKER - PREPARE ALL"
+ssh root@$ENV_HOST -p $ENV_SSH_PORT $ENV_FOLDER/architecture/scripts/prepare-all.sh "$ENV_TYPE"
 
 Write-Output "DOCKER - Finished"
 

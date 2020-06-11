@@ -21,6 +21,7 @@ apt-get -qq -y install \
     php${PHP_VERSION}-pdo-mysql \
     php${PHP_VERSION}-redis \
     php${PHP_VERSION}-readline \
+    php${PHP_VERSION}-ssh2 \
     php${PHP_VERSION}-simplexml \
     php${PHP_VERSION}-soap \
     php${PHP_VERSION}-xml \

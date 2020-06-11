@@ -14,6 +14,7 @@
         "spipu/core-bundle": "dev-master",
         "spipu/ui-bundle": "dev-master",
         "spipu/user-bundle": "dev-master",
+        "spipu/process-bundle": "dev-master",
         "symfony/asset": "*",
         "symfony/console": "*",
         "symfony/expression-language": "*",

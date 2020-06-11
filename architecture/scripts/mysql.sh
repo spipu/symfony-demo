@@ -9,4 +9,8 @@ cd ../../
 ENV_DO_NOT_GENERATE="yes"
 source ./architecture/scripts/include/init.sh
 
-mysql -h localhost -u"$DB_USER" -p"$DB_PASS" "$DB_NAME"
+if [[ "$2" ]]; then
+  mysql -h localhost -u"$DB_USER" -p"$DB_PASS" "$DB_NAME" -e "$2"
+else
+  mysql -h localhost -u"$DB_USER" -p"$DB_PASS" "$DB_NAME"
+fi

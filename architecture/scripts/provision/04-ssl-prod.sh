@@ -12,5 +12,10 @@ if [[ ! -f "$SSL_CERT_PRIVATE" ]]; then
     exit 1
 fi
 
+if [[ ! -f "$SSL_CERT_CHAIN" ]]; then
+    showError "The Chain Certificat File is missing"
+    exit 1
+fi
+
 chown root.root $SSL_CERT_FOLDER/*
 chmod 600       $SSL_CERT_FOLDER/*
