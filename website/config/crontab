@@ -13,5 +13,6 @@
 #--------------------------------------------------
 
 # Clean the old tasks and old logs
-0   2 * * * {{MAIN_FOLDER}}/bin/console spipu:process:cron-manager cleanup >> {{MAIN_FOLDER}}/var/log/cron.log 2>&1
-*/5 * * * * {{MAIN_FOLDER}}/bin/console spipu:process:cron-manager rerun   >> {{MAIN_FOLDER}}/var/log/cron.log 2>&1
+0    2 * * * {{MAIN_FOLDER}}/bin/console spipu:process:cron-manager cleanup   >> {{MAIN_FOLDER}}/var/log/cron.log 2>&1
+*/5  * * * * {{MAIN_FOLDER}}/bin/console spipu:process:cron-manager rerun     >> {{MAIN_FOLDER}}/var/log/cron.log 2>&1
+*/10 * * * * {{MAIN_FOLDER}}/bin/console spipu:process:cron-manager check-pid >> {{MAIN_FOLDER}}/var/log/cron.log 2>&1

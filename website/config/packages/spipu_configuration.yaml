@@ -1,5 +1,6 @@
 imports:
   - { resource: "@SpipuConfigurationBundle/Resources/config/spipu_configuration.yaml" }
+  - { resource: "@SpipuProcessBundle/Resources/config/spipu_configuration.yaml" }
 
 spipu_configuration:
   app.website.name:
