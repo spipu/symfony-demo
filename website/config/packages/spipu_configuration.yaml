@@ -7,3 +7,11 @@ spipu_configuration:
     type:     string
     required: true
     default:  "Website"
+
+  test.field.password:
+    type:     password
+    required: true
+
+  test.field.encrypted:
+    type:     encrypted
+    required: true
