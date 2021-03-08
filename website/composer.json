@@ -9,7 +9,6 @@
         "ext-iconv": "*",
         "predis/predis": "^1.1",
         "sensio/framework-extra-bundle": "*",
-        "sensiolabs/security-checker": "*",
         "spipu/configuration-bundle": "dev-master",
         "spipu/core-bundle": "dev-master",
         "spipu/ui-bundle": "dev-master",
@@ -99,8 +98,7 @@
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd",
-            "spipu:assets:install %PUBLIC_DIR%": "symfony-cmd",
-            "security-checker security:check": "script"
+            "spipu:assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
         "post-install-cmd": [
             "@auto-scripts"

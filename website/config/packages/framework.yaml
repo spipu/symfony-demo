@@ -1,6 +1,6 @@
 imports:
     - { resource: ../app_default_configuration.yaml }
-    - { resource: /etc/symfony/symfonydemo.yaml, ignore_errors: true  }
+    - { resource: /etc/symfonydemo/symfony.yaml, ignore_errors: true  }
 
 parameters:
     APP_SETTINGS_REDIS_CACHE_URL:   "redis://%APP_SETTINGS_REDIS_CACHE_HOST%:%APP_SETTINGS_REDIS_CACHE_PORT%/%APP_SETTINGS_REDIS_CACHE_DB%"

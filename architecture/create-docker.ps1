@@ -23,7 +23,11 @@ $ENV_FOLDER="/var/www/$ENV_NAME"
 $WEB_FOLDER="website"
 
 # Parameters SSH
-$SSH_PUB=(Get-Content ~/.ssh/id_rsa.pub)
+If (Test-Path ~/.ssh/id_ed25519.pub) {
+    $SSH_PUB=(Get-Content ~/.ssh/id_ed25519.pub)
+} else {
+    $SSH_PUB=(Get-Content ~/.ssh/id_rsa.pub)
+}
 
 # Replace Function
 function ReplacePattern($FILE, $FROM, $TO)
@@ -52,13 +56,6 @@ Get-ChildItem ./architecture/vm/ -File -Recurse | ForEach-Object {
 Remove-Item -Recurse -Force ./architecture/vm/docker/start.sh
 Copy-Item -Recurse ./architecture/conf/template/vm/docker/start.sh ./architecture/vm/docker/start.sh
 
-# Prepare Host Files
-#Write-Output "DOCKER - Prepare Hosts"
-#$HOSTS_FILE="$env:windir\System32\drivers\etc\hosts"
-#Set-Content -Path $HOSTS_FILE -Force -Value (get-content -Path $HOSTS_FILE | Select-String -Pattern "$ENV_HOST" -NotMatch)
-#Add-Content -Path $HOSTS_FILE -Value "# Added for docker $ENV_HOST"
-#Add-Content -Path $HOSTS_FILE -Value "$ENV_IP $ENV_HOST"
-
 # Create Container
 Write-Output "DOCKER - Create"
 cd ./architecture/vm
@@ -76,7 +73,8 @@ If (Test-Path ./$WEB_FOLDER/var) {
     Remove-Item -Recurse -Force ./$WEB_FOLDER/var
 }
 
-Write-Output "DOCKER - PREPARE ALL"
+Write-Output "DOCKER - Prepare All"
+
 ssh root@$ENV_HOST -p $ENV_SSH_PORT $ENV_FOLDER/architecture/scripts/prepare-all.sh "$ENV_TYPE"
 
 Write-Output "DOCKER - Finished"

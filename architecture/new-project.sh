@@ -44,7 +44,6 @@ chmod +x ${PROJECT_FOLDER}/bin/*
 echo ""
 
 echo "Add useful Packages"
-composer require       sensiolabs/security-checker      -d ${PROJECT_FOLDER} --no-update
 composer remove        symfony/dotenv                   -d ${PROJECT_FOLDER} --no-update
 composer remove  --dev symfony/test-pack                -d ${PROJECT_FOLDER} --no-update
 composer remove  --dev symfony/web-server-bundle        -d ${PROJECT_FOLDER} --no-update
@@ -73,7 +72,7 @@ FOLDER_CONFIG="${PROJECT_FOLDER}/config/"
 FILE_CONFIG="${FOLDER_CONFIG}packages/framework.yaml"
 echo "imports:
     - { resource: ../app_default_configuration.yaml }
-    - { resource: /etc/symfony/$PROJECT_NAME.yaml, ignore_errors: true  }
+    - { resource: /etc/$PROJECT_NAME/symfony.yaml, ignore_errors: true  }
 
 parameters:
     APP_SETTINGS_REDIS_CACHE_URL:   'redis://%APP_SETTINGS_REDIS_CACHE_HOST%:%APP_SETTINGS_REDIS_CACHE_PORT%/%APP_SETTINGS_REDIS_CACHE_DB%'

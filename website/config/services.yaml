@@ -4,6 +4,8 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
+    # Encryptor Configuration
+    spipu.core.encryptor.key_pair: "%APP_SETTINGS_APP_ENCRYPTOR_KEY_PAIR%"
 
 services:
     # default configuration for services in *this* file
