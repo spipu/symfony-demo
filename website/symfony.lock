@@ -129,9 +129,6 @@
     "grasmash/yaml-expander": {
         "version": "1.4.0"
     },
-    "jakub-onderka/php-parallel-lint": {
-        "version": "v1.0.0"
-    },
     "laminas/laminas-code": {
         "version": "3.4.1"
     },
@@ -170,6 +167,9 @@
     },
     "php": {
         "version": "7.2.24"
+    },
+    "php-parallel-lint/php-parallel-lint": {
+        "version": "v1.3.0"
     },
     "phpdocumentor/reflection-common": {
         "version": "1.0.1"
@@ -237,6 +237,9 @@
     "psr/log": {
         "version": "1.1.0"
     },
+    "sebastian/cli-parser": {
+        "version": "1.0.1"
+    },
     "sebastian/code-unit-reverse-lookup": {
         "version": "1.0.1"
     },
@@ -251,9 +254,6 @@
     },
     "sebastian/exporter": {
         "version": "3.1.0"
-    },
-    "sebastian/finder-facade": {
-        "version": "1.2.2"
     },
     "sebastian/global-state": {
         "version": "3.0.0"
@@ -674,9 +674,6 @@
     },
     "symfony/yaml": {
         "version": "v4.3.2"
-    },
-    "theseer/fdomdocument": {
-        "version": "1.6.6"
     },
     "theseer/tokenizer": {
         "version": "1.1.3"

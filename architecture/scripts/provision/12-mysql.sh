@@ -1,28 +1,36 @@
 #!/bin/bash
 
-showMessage " > MySQL - Perconna Repo"
+showMessage " > MySQL - MariaDB Repo"
 
-wget -q https://repo.percona.com/apt/percona-release_latest.$(lsb_release -sc)_all.deb > /dev/null
-dpkg -i percona-release_latest.$(lsb_release -sc)_all.deb > /dev/null
-rm   -f percona-release_latest.$(lsb_release -sc)_all.deb
+apt-get -qq -y install software-properties-common > /dev/null
+apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'  > /dev/null 2>&1
+add-apt-repository 'deb [arch=amd64,arm64,ppc64el] https://ftp.igh.cnrs.fr/pub/mariadb/repo/10.4/ubuntu focal main'  > /dev/null
+
 apt-get -qq update > /dev/null
 
-showMessage " > MySQL - Perconna Install"
+showMessage " > MySQL - MariaDB Install"
 
-apt-get -qq -y install percona-server-server-5.7 > /dev/null
+apt-get -qq -y install mariadb-server > /dev/null
 
 showMessage " > MySQL - Configure"
 
 mkdir -p /var/log/mysql
-mkdir -p /etc/mysql/percona-server.conf.d
-createFromTemplate "$CONFIG_FOLDER/mysql/mysql.cnf" "/etc/mysql/percona-server.conf.d/provision.cnf"
+mkdir -p /etc/mysql/conf.d
+createFromTemplate "$CONFIG_FOLDER/mysql/mysql.cnf" "/etc/mysql/conf.d/provision.cnf"
 
 showMessage " > MySQL - Service"
 
 if [[ "$ENV_TYPE" = "docker" ]]; then
-    /etc/init.d/mysql stop   > /dev/null
-    /etc/init.d/mysql start  > /dev/null
-    /etc/init.d/mysql status > /dev/null
+    mkdir -p /var/run/mysqld
+    chown mysql.root /var/run/mysqld
+
+    createFromTemplate "$CONFIG_FOLDER/mysql/mysql.sh" "/etc/init.d/mysql"
+
+    chown root.root /etc/init.d/mysql
+    chmod 755       /etc/init.d/mysql
+
+    update-rc.d mysql defaults
+    /etc/init.d/mysql start > /dev/null
 else
     systemctl stop mysql  > /dev/null
     systemctl start mysql      > /dev/null

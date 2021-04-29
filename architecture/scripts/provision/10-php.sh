@@ -1,7 +1,7 @@
 #!/bin/bash
 
-PHP_VERSION="7.2"
-PHP_FOLDER="php/7.2"
+PHP_VERSION="7.4"
+PHP_FOLDER="php/7.4"
 
 showMessage " > PHP - Install ${PHP_VERSION}"
 

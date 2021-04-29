@@ -1,14 +1,9 @@
 doctrine:
     dbal:
-        # configure these for your database server
         driver: 'pdo_mysql'
-        server_version: '5.7'
-        charset: utf8mb4
-        default_table_options:
-            charset: utf8mb4
-            collate: utf8mb4_unicode_ci
-
+        server_version: 'mariadb-10.4.17'
         url: '%APP_SETTINGS_DATABASE_URL%'
+        override_url: true
     orm:
         auto_generate_proxy_classes: true
         naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
