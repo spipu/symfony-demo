@@ -20,9 +20,6 @@
     "consolidation/self-update": {
         "version": "1.1.5"
     },
-    "container-interop/container-interop": {
-        "version": "1.2.0"
-    },
     "dflydev/dot-access-data": {
         "version": "v1.1.0"
     },
@@ -519,6 +516,9 @@
     },
     "symfony/polyfill-php80": {
         "version": "v1.17.0"
+    },
+    "symfony/polyfill-php81": {
+        "version": "v1.23.0"
     },
     "symfony/process": {
         "version": "v4.3.2"
