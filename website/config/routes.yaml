@@ -1,8 +1,8 @@
 spipu_user:
-  resource: '@SpipuUserBundle/Resources/config/routes.yaml'
+    resource: '@SpipuUserBundle/Resources/config/routes.yaml'
 
 spipu_configuration:
-  resource: '@SpipuConfigurationBundle/Resources/config/routes.yaml'
+    resource: '@SpipuConfigurationBundle/Resources/config/routes.yaml'
 
 spipu_process:
-  resource: '@SpipuProcessBundle/Resources/config/routes.yaml'
+    resource: '@SpipuProcessBundle/Resources/config/routes.yaml'

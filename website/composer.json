@@ -3,17 +3,30 @@
     "type": "project",
     "license": "MIT",
     "description": "A demo to test bundles",
+    "prefer-stable": true,
     "require": {
         "php": "^7.4",
         "ext-ctype": "*",
+        "ext-curl": "*",
         "ext-iconv": "*",
+        "ext-json": "*",
+        "ext-pdo": "*",
+        "ext-posix": "*",
+        "ext-sodium": "*",
+        "ext-zip": "*",
+        "composer/package-versions-deprecated": "*",
+        "doctrine/annotations": "^1.0",
+        "doctrine/doctrine-bundle": "*",
+        "doctrine/doctrine-migrations-bundle": "*",
+        "doctrine/orm": "*",
+        "phpdocumentor/reflection-docblock": "*",
         "predis/predis": "^1.1",
         "sensio/framework-extra-bundle": "*",
-        "spipu/configuration-bundle": "dev-master",
-        "spipu/core-bundle": "dev-master",
-        "spipu/ui-bundle": "dev-master",
-        "spipu/user-bundle": "dev-master",
-        "spipu/process-bundle": "dev-master",
+        "spipu/configuration-bundle": "dev-sf5",
+        "spipu/core-bundle": "dev-sf5",
+        "spipu/ui-bundle": "dev-sf5",
+        "spipu/user-bundle": "dev-sf5",
+        "spipu/process-bundle": "dev-sf5",
         "symfony/asset": "*",
         "symfony/console": "*",
         "symfony/expression-language": "*",
@@ -23,18 +36,25 @@
         "symfony/http-client": "*",
         "symfony/intl": "*",
         "symfony/monolog-bundle": "*",
-        "symfony/orm-pack": "*",
+        "symfony/notifier": "*",
         "symfony/process": "*",
+        "symfony/property-access": "*",
+        "symfony/property-info": "*",
+        "symfony/proxy-manager-bridge": "*",
+        "symfony/runtime": "*",
         "symfony/security-bundle": "*",
-        "symfony/serializer-pack": "*",
+        "symfony/serializer": "*",
+        "symfony/string": "*",
         "symfony/translation": "*",
-        "symfony/twig-pack": "*",
+        "symfony/twig-bundle": "*",
         "symfony/validator": "*",
         "symfony/web-link": "*",
-        "symfony/yaml": "*"
+        "symfony/yaml": "*",
+        "twig/extra-bundle": "^2.12|^3.0",
+        "twig/twig": "^2.12|^3.0"
     },
     "require-dev": {
-        "edgedesign/phpqa": "^1.23",
+        "edgedesign/phpqa": "^1.25",
         "php-parallel-lint/php-parallel-lint": "*",
         "pdepend/pdepend": "*",
         "phpmd/phpmd": "*",
@@ -43,12 +63,15 @@
         "squizlabs/php_codesniffer": "*",
         "symfony/browser-kit": "*",
         "symfony/css-selector": "*",
-        "symfony/debug-pack": "*",
+        "symfony/debug-bundle": "*",
         "symfony/dotenv": "*",
         "symfony/maker-bundle": "*",
-        "symfony/profiler-pack": "*"
+        "symfony/stopwatch": "*",
+        "symfony/var-dumper": "*",
+        "symfony/web-profiler-bundle": "*"
     },
     "config": {
+        "optimize-autoloader": true,
         "preferred-install": {
             "*": "dist"
         },
@@ -86,13 +109,9 @@
         }
     },
     "replace": {
-        "paragonie/random_compat": "2.*",
         "symfony/polyfill-ctype": "*",
         "symfony/polyfill-iconv": "*",
-        "symfony/polyfill-php72": "*",
-        "symfony/polyfill-php71": "*",
-        "symfony/polyfill-php70": "*",
-        "symfony/polyfill-php56": "*"
+        "symfony/polyfill-php72": "*"
     },
     "scripts": {
         "auto-scripts": {
@@ -113,7 +132,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "v4.4.*"
+            "require": "5.3.*"
         }
     }
 }

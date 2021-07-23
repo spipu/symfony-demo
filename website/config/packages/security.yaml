@@ -1,5 +1,6 @@
 security:
-    encoders:
+    enable_authenticator_manager: true
+    password_hashers:
         App\Entity\User:
             algorithm: auto
 
@@ -7,6 +8,7 @@ security:
         spipu_users:
             entity:
                 class: App\Entity\User
+                property: 'username'
 
     firewalls:
         dev:
@@ -15,14 +17,13 @@ security:
 
         main:
             pattern:      ^/
-            anonymous:    true
             provider:     spipu_users
             user_checker: Spipu\UserBundle\Security\UserChecker
             form_login:
                 remember_me: true
                 login_path: spipu_user_security_login
                 check_path: spipu_user_security_login
-                csrf_token_generator: security.csrf.token_manager
+                enable_csrf: true
                 default_target_path: app_home
             remember_me:
                 secret: "%kernel.secret%"
@@ -35,7 +36,7 @@ security:
 
     access_control:
         # Login & Logout
-        - { path: ^/login,               roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/logout,              roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        # Main
-        - { path: ^/,                    roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/login,               roles: PUBLIC_ACCESS }
+        - { path: ^/logout,              roles: PUBLIC_ACCESS }
+       # Main
+        - { path: ^/,                    roles: PUBLIC_ACCESS }
