@@ -4,7 +4,7 @@ showMessage " > MySQL - MariaDB Repo"
 
 apt-get -qq -y install software-properties-common > /dev/null
 apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'  > /dev/null 2>&1
-add-apt-repository 'deb [arch=amd64,arm64,ppc64el] https://ftp.igh.cnrs.fr/pub/mariadb/repo/10.4/ubuntu focal main'  > /dev/null
+add-apt-repository 'deb [arch=amd64,arm64,ppc64el,s390x] https://mirrors.xtom.de/mariadb/repo/10.4/ubuntu focal main'  > /dev/null
 
 apt-get -qq update > /dev/null
 
