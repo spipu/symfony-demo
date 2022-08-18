@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cbd69128f709ae21308733b8fa66aa34",
+    "content-hash": "2d44fd696c4012f7f913ef52b6d114ba",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -406,16 +406,16 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "3.4.0",
+            "version": "3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "118a360e9437e88d49024f36283c8bcbd76105f5"
+                "reference": "94e016428884227245fb1219e0de7d8b86ca16d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/118a360e9437e88d49024f36283c8bcbd76105f5",
-                "reference": "118a360e9437e88d49024f36283c8bcbd76105f5",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/94e016428884227245fb1219e0de7d8b86ca16d7",
+                "reference": "94e016428884227245fb1219e0de7d8b86ca16d7",
                 "shasum": ""
             },
             "require": {
@@ -497,7 +497,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/dbal/issues",
-                "source": "https://github.com/doctrine/dbal/tree/3.4.0"
+                "source": "https://github.com/doctrine/dbal/tree/3.4.1"
             },
             "funding": [
                 {
@@ -513,7 +513,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-08-06T20:35:57+00:00"
+            "time": "2022-08-16T18:37:46+00:00"
         },
         {
             "name": "doctrine/deprecations",
@@ -1196,16 +1196,16 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "2.13.0",
+            "version": "2.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/orm.git",
-                "reference": "827cb0c10bd0440b5e1b8ec7f5dc1fc1810f1821"
+                "reference": "35c44a56677adb3ce796138b6e4934ce93ec6811"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/orm/zipball/827cb0c10bd0440b5e1b8ec7f5dc1fc1810f1821",
-                "reference": "827cb0c10bd0440b5e1b8ec7f5dc1fc1810f1821",
+                "url": "https://api.github.com/repos/doctrine/orm/zipball/35c44a56677adb3ce796138b6e4934ce93ec6811",
+                "reference": "35c44a56677adb3ce796138b6e4934ce93ec6811",
                 "shasum": ""
             },
             "require": {
@@ -1290,9 +1290,9 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/orm/issues",
-                "source": "https://github.com/doctrine/orm/tree/2.13.0"
+                "source": "https://github.com/doctrine/orm/tree/2.13.1"
             },
-            "time": "2022-08-07T16:11:43+00:00"
+            "time": "2022-08-08T09:00:16+00:00"
         },
         {
             "name": "doctrine/persistence",
@@ -2324,20 +2324,20 @@
         },
         {
             "name": "spipu/configuration-bundle",
-            "version": "dev-sf5",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/symfony-bundle-configuration.git",
-                "reference": "19659b07bdaee0bc260890ee12304b0c91ee9dcf"
+                "reference": "cd90ac7bd6c7dbd4a6ec6151445621a0c03de6dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/symfony-bundle-configuration/zipball/19659b07bdaee0bc260890ee12304b0c91ee9dcf",
-                "reference": "19659b07bdaee0bc260890ee12304b0c91ee9dcf",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-configuration/zipball/cd90ac7bd6c7dbd4a6ec6151445621a0c03de6dc",
+                "reference": "cd90ac7bd6c7dbd4a6ec6151445621a0c03de6dc",
                 "shasum": ""
             },
             "require": {
-                "spipu/ui-bundle": "*",
+                "spipu/ui-bundle": "^2.0",
                 "symfony/framework-bundle": "^5.4"
             },
             "type": "symfony-bundle",
@@ -2359,22 +2359,22 @@
             "description": "Spipu Configuration Bundle",
             "support": {
                 "issues": "https://github.com/spipu/symfony-bundle-configuration/issues",
-                "source": "https://github.com/spipu/symfony-bundle-configuration/tree/sf5"
+                "source": "https://github.com/spipu/symfony-bundle-configuration/tree/v2.0.1"
             },
-            "time": "2022-04-04T08:01:13+00:00"
+            "time": "2022-08-18T13:44:30+00:00"
         },
         {
             "name": "spipu/core-bundle",
-            "version": "dev-sf5",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/symfony-bundle-core.git",
-                "reference": "c9c645d7d4d76240807aac825712c294ba32a2d5"
+                "reference": "dd37cc173d723bf05c8a1f2b8609f3d4853ecc9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/symfony-bundle-core/zipball/c9c645d7d4d76240807aac825712c294ba32a2d5",
-                "reference": "c9c645d7d4d76240807aac825712c294ba32a2d5",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-core/zipball/dd37cc173d723bf05c8a1f2b8609f3d4853ecc9f",
+                "reference": "dd37cc173d723bf05c8a1f2b8609f3d4853ecc9f",
                 "shasum": ""
             },
             "require": {
@@ -2403,29 +2403,29 @@
             "description": "Spipu Core Bundle",
             "support": {
                 "issues": "https://github.com/spipu/symfony-bundle-core/issues",
-                "source": "https://github.com/spipu/symfony-bundle-core/tree/sf5"
+                "source": "https://github.com/spipu/symfony-bundle-core/tree/v2.0.1"
             },
-            "time": "2022-04-11T21:48:36+00:00"
+            "time": "2022-08-18T13:44:30+00:00"
         },
         {
             "name": "spipu/process-bundle",
-            "version": "dev-sf5",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/symfony-bundle-process.git",
-                "reference": "da86c1f01d2684f1fcebee76a1d702b3c0713474"
+                "reference": "a07ed4e857cca25d47b42df9f6d9e4973380c4bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/symfony-bundle-process/zipball/da86c1f01d2684f1fcebee76a1d702b3c0713474",
-                "reference": "da86c1f01d2684f1fcebee76a1d702b3c0713474",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-process/zipball/a07ed4e857cca25d47b42df9f6d9e4973380c4bb",
+                "reference": "a07ed4e857cca25d47b42df9f6d9e4973380c4bb",
                 "shasum": ""
             },
             "require": {
                 "ext-pdo": "*",
                 "ext-posix": "*",
-                "spipu/configuration-bundle": "*",
-                "spipu/ui-bundle": "*",
+                "spipu/configuration-bundle": "^2.0",
+                "spipu/ui-bundle": "^2.0",
                 "symfony/framework-bundle": "^5.4"
             },
             "type": "symfony-bundle",
@@ -2447,27 +2447,27 @@
             "description": "Spipu Process Bundle",
             "support": {
                 "issues": "https://github.com/spipu/symfony-bundle-process/issues",
-                "source": "https://github.com/spipu/symfony-bundle-process/tree/sf5"
+                "source": "https://github.com/spipu/symfony-bundle-process/tree/v2.0.1"
             },
-            "time": "2022-08-08T08:29:06+00:00"
+            "time": "2022-08-18T13:44:30+00:00"
         },
         {
             "name": "spipu/ui-bundle",
-            "version": "dev-sf5",
+            "version": "v2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/symfony-bundle-ui.git",
-                "reference": "b0144f08bbd61a4adb3760bab6ffb060c3bc98e6"
+                "reference": "74919b87289bc72635ef23e076da5fb9239df45c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/symfony-bundle-ui/zipball/b0144f08bbd61a4adb3760bab6ffb060c3bc98e6",
-                "reference": "b0144f08bbd61a4adb3760bab6ffb060c3bc98e6",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-ui/zipball/74919b87289bc72635ef23e076da5fb9239df45c",
+                "reference": "74919b87289bc72635ef23e076da5fb9239df45c",
                 "shasum": ""
             },
             "require": {
                 "ext-zip": "*",
-                "spipu/core-bundle": "*",
+                "spipu/core-bundle": "^2.0",
                 "symfony/framework-bundle": "^5.4",
                 "symfony/http-kernel": "^5.4",
                 "symfony/twig-bundle": "^5.4",
@@ -2492,26 +2492,26 @@
             "description": "Spipu User Interface Bundle",
             "support": {
                 "issues": "https://github.com/spipu/symfony-bundle-ui/issues",
-                "source": "https://github.com/spipu/symfony-bundle-ui/tree/sf5"
+                "source": "https://github.com/spipu/symfony-bundle-ui/tree/v2.0.2"
             },
-            "time": "2022-04-11T21:54:32+00:00"
+            "time": "2022-08-18T14:01:19+00:00"
         },
         {
             "name": "spipu/user-bundle",
-            "version": "dev-sf5",
+            "version": "v2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/symfony-bundle-user.git",
-                "reference": "153b86e7ebbb4c5252950fd8127a0c579fb9d168"
+                "reference": "5b7afe057ce206b8649d8a95200321e5665ff786"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/symfony-bundle-user/zipball/153b86e7ebbb4c5252950fd8127a0c579fb9d168",
-                "reference": "153b86e7ebbb4c5252950fd8127a0c579fb9d168",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-user/zipball/5b7afe057ce206b8649d8a95200321e5665ff786",
+                "reference": "5b7afe057ce206b8649d8a95200321e5665ff786",
                 "shasum": ""
             },
             "require": {
-                "spipu/ui-bundle": "*",
+                "spipu/ui-bundle": "^2.0",
                 "symfony/framework-bundle": "^5.4"
             },
             "type": "symfony-bundle",
@@ -2533,9 +2533,9 @@
             "description": "Spipu User Security Bundle",
             "support": {
                 "issues": "https://github.com/spipu/symfony-bundle-user/issues",
-                "source": "https://github.com/spipu/symfony-bundle-user/tree/sf5"
+                "source": "https://github.com/spipu/symfony-bundle-user/tree/v2.0.2"
             },
-            "time": "2022-03-16T13:18:09+00:00"
+            "time": "2022-08-18T14:01:19+00:00"
         },
         {
             "name": "symfony/asset",
@@ -7823,16 +7823,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.4.1",
+            "version": "v3.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "e939eae92386b69b49cfa4599dd9bead6bf4a342"
+                "reference": "e07cdd3d430cd7e453c31b36eb5ad6c0c5e43077"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/e939eae92386b69b49cfa4599dd9bead6bf4a342",
-                "reference": "e939eae92386b69b49cfa4599dd9bead6bf4a342",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/e07cdd3d430cd7e453c31b36eb5ad6c0c5e43077",
+                "reference": "e07cdd3d430cd7e453c31b36eb5ad6c0c5e43077",
                 "shasum": ""
             },
             "require": {
@@ -7883,7 +7883,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.4.1"
+                "source": "https://github.com/twigphp/Twig/tree/v3.4.2"
             },
             "funding": [
                 {
@@ -7895,7 +7895,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-05-17T05:48:52+00:00"
+            "time": "2022-08-12T06:47:24+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -10109,13 +10109,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "spipu/configuration-bundle": 20,
-        "spipu/core-bundle": 20,
-        "spipu/ui-bundle": 20,
-        "spipu/user-bundle": 20,
-        "spipu/process-bundle": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
