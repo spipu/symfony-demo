@@ -15,11 +15,11 @@
         "phpdocumentor/reflection-docblock": "^5.3",
         "predis/predis": "^1.1",
         "sensio/framework-extra-bundle": "*",
-        "spipu/configuration-bundle": "dev-master",
-        "spipu/core-bundle": "dev-master",
-        "spipu/process-bundle": "dev-master",
-        "spipu/ui-bundle": "dev-master",
-        "spipu/user-bundle": "dev-master",
+        "spipu/configuration-bundle": "*",
+        "spipu/core-bundle": "*",
+        "spipu/process-bundle": "*",
+        "spipu/ui-bundle": "*",
+        "spipu/user-bundle": "*",
         "symfony/asset": "*",
         "symfony/console": "*",
         "symfony/expression-language": "*",
@@ -87,7 +87,8 @@
         },
         "allow-plugins": {
             "composer/package-versions-deprecated": true,
-            "symfony/flex": true
+            "symfony/flex": true,
+            "symfony/runtime": true
         }
     },
     "autoload": {
