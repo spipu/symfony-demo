@@ -1,0 +1,14 @@
+spipu_process:
+    test_hello:
+        name: "Test Hello"
+
+        options:
+            can_be_put_in_queue: true
+            can_be_rerun_automatically: false
+
+        steps:
+            hello_world:
+                class: Spipu\ProcessBundle\Step\Test\HelloWorld
+                parameters:
+                    name_from: "Foo"
+                    name_to:   "Bar"

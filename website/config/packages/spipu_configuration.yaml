@@ -1,17 +1,23 @@
 imports:
-  - { resource: "@SpipuConfigurationBundle/Resources/config/spipu_configuration.yaml" }
-  - { resource: "@SpipuProcessBundle/Resources/config/spipu_configuration.yaml" }
+- { resource: "@SpipuConfigurationBundle/Resources/config/spipu_configuration.yaml" }
+- { resource: "@SpipuProcessBundle/Resources/config/spipu_configuration.yaml" }
 
 spipu_configuration:
-  app.website.name:
-    type:     string
-    required: true
-    default:  "Website"
+    app.website.name:
+        type:     string
+        required: true
+        default:  "Symfony Demo"
 
-  test.field.password:
-    type:     password
-    required: true
+    test.type.encrypted:
+        type:     encrypted
+        required: true
 
-  test.field.encrypted:
-    type:     encrypted
-    required: true
+    test.type.file:
+        type: file
+        required: false
+        file_type: ['jpeg', 'png']
+        help: "Only JPEG and PNG files are allowed"
+
+    test.type.password:
+        type:     password
+        required: true

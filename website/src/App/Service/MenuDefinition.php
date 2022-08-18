@@ -1,8 +1,19 @@
 <?php
-declare(strict_types = 1);
+
+/**
+ * This file is a demo file for Spipu Bundles
+ *
+ * (c) Laurent Minguet
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+declare(strict_types=1);
 
 namespace App\Service;
 
+use Spipu\ConfigurationBundle\Exception\ConfigurationException;
 use Spipu\ConfigurationBundle\Service\Manager as ConfigurationManager;
 use Spipu\UiBundle\Entity\Menu\Item;
 use Spipu\UiBundle\Service\Menu\DefinitionInterface;
@@ -30,6 +41,7 @@ class MenuDefinition implements DefinitionInterface
 
     /**
      * @return void
+     * @throws ConfigurationException
      */
     private function build(): void
     {
@@ -81,6 +93,7 @@ class MenuDefinition implements DefinitionInterface
 
     /**
      * @return Item
+     * @throws ConfigurationException
      */
     public function getDefinition(): Item
     {
