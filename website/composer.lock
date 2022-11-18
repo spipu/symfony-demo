@@ -2332,16 +2332,16 @@
         },
         {
             "name": "spipu/configuration-bundle",
-            "version": "v2.1.0",
+            "version": "v2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/symfony-bundle-configuration.git",
-                "reference": "34469206b0e7ee59fd6bce102fd67e7ad3043191"
+                "reference": "143c90e7ac82f8a20a3055415fe0299fd4b03538"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/symfony-bundle-configuration/zipball/34469206b0e7ee59fd6bce102fd67e7ad3043191",
-                "reference": "34469206b0e7ee59fd6bce102fd67e7ad3043191",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-configuration/zipball/143c90e7ac82f8a20a3055415fe0299fd4b03538",
+                "reference": "143c90e7ac82f8a20a3055415fe0299fd4b03538",
                 "shasum": ""
             },
             "require": {
@@ -2367,9 +2367,9 @@
             "description": "Spipu Configuration Bundle",
             "support": {
                 "issues": "https://github.com/spipu/symfony-bundle-configuration/issues",
-                "source": "https://github.com/spipu/symfony-bundle-configuration/tree/v2.1.0"
+                "source": "https://github.com/spipu/symfony-bundle-configuration/tree/v2.1.1"
             },
-            "time": "2022-11-14T11:58:00+00:00"
+            "time": "2022-11-18T11:29:28+00:00"
         },
         {
             "name": "spipu/core-bundle",
@@ -7971,16 +7971,16 @@
     "packages-dev": [
         {
             "name": "composer/pcre",
-            "version": "3.0.2",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/pcre.git",
-                "reference": "4482b6409ca6bfc2af043a5711cd21ac3e7a8dfb"
+                "reference": "4bff79ddd77851fe3cdd11616ed3f92841ba5bd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/pcre/zipball/4482b6409ca6bfc2af043a5711cd21ac3e7a8dfb",
-                "reference": "4482b6409ca6bfc2af043a5711cd21ac3e7a8dfb",
+                "url": "https://api.github.com/repos/composer/pcre/zipball/4bff79ddd77851fe3cdd11616ed3f92841ba5bd2",
+                "reference": "4bff79ddd77851fe3cdd11616ed3f92841ba5bd2",
                 "shasum": ""
             },
             "require": {
@@ -8022,7 +8022,7 @@
             ],
             "support": {
                 "issues": "https://github.com/composer/pcre/issues",
-                "source": "https://github.com/composer/pcre/tree/3.0.2"
+                "source": "https://github.com/composer/pcre/tree/3.1.0"
             },
             "funding": [
                 {
@@ -8038,7 +8038,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-03T20:24:16+00:00"
+            "time": "2022-11-17T09:50:14+00:00"
         },
         {
             "name": "composer/semver",
