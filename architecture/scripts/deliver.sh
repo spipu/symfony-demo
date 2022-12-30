@@ -101,7 +101,7 @@ echo " => Flush Redis Cache"
 redis-cli -p 6379 flushall > /dev/null
 
 echo " => Schema Update"
-"$FULL_FOLDER/website/bin/console" doctrine:schema:update --force
+"$FULL_FOLDER/website/bin/console" doctrine:schema:update --force --dump-sql --complete
 if [[ "$?" -ne 0 ]]; then
   showError "On schema update"
   exit 1

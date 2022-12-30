@@ -27,7 +27,7 @@ showMessage "Redis"
 redis-cli -p 6379 flushall
 
 showMessage "Doctrine Schema"
-./bin/console doctrine:schema:update --force --dump-sql
+./bin/console doctrine:schema:update --force --dump-sql --complete
 
 showMessage "Assets"
 ./bin/console assets:install --symlink --relative
