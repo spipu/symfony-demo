@@ -2,15 +2,15 @@
 
 showMessage " > Symfony - Install CLI"
 
-if [[ -d "/root/.symfony" ]]; then
-  rm -rf /root/.symfony
+if [[ -d "/root/.symfony5" ]]; then
+  rm -rf /root/.symfony5
 fi
 if [[ -f "/usr/local/bin/symfony" ]]; then
   rm -r /usr/local/bin/symfony
 fi
 wget -q https://get.symfony.com/cli/installer -O - | bash > /dev/null 2>&1
 
-mv /root/.symfony/bin/symfony /usr/local/bin/symfony
+mv /root/.symfony5/bin/symfony /usr/local/bin/symfony
 
 showMessage " > Symfony - Configure"
 
