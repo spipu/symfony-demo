@@ -14,7 +14,16 @@
                     My Homepage
                 </div>
                 <div class="card-body">
-                    This is a homepage test
+                    This is a homepage test<br />
+                    <button type="button" class="m-4 btn btn-danger confirm-modal-link"
+                        data-action-message="Do you really want to log-out?"
+                        data-action-label="Log-out"
+                        data-action-icon="sign-out"
+                        data-action-level="danger"
+                        data-action-url="{{ path('spipu_user_security_logout') }}"
+                    >
+                        Logout
+                    </button><br />
                 </div>
                 <div class="card-footer">
                     Super Footer
