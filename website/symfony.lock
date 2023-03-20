@@ -210,6 +210,9 @@
     "spipu/core-bundle": {
         "version": "dev-master"
     },
+    "spipu/dashboard-bundle": {
+        "version": "v2.3.0"
+    },
     "spipu/process-bundle": {
         "version": "dev-master"
     },

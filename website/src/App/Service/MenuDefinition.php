@@ -52,6 +52,9 @@ class MenuDefinition implements DefinitionInterface
             ->setCssClass('navbar-dark bg-danger')
             ->addChild('spipu.ui.page.home', 'home', 'app_home')
                 ->getParentItem()
+            ->addChild('spipu.dashboard.page.home.title', 'spipu-dashboard', 'app_dashboard')
+                ->setACL(true)
+                ->getParentItem()
             ->addChild('spipu.ui.page.admin')
                 ->addChild(
                     'spipu.configuration.page.admin.list',

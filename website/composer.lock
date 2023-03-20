@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2d44fd696c4012f7f913ef52b6d114ba",
+    "content-hash": "56fb35a34fcc5b3dee861afed46e4226",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -2317,16 +2317,16 @@
         },
         {
             "name": "spipu/configuration-bundle",
-            "version": "v2.1.2",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/symfony-bundle-configuration.git",
-                "reference": "830cba924b1777915bbc6e81a7c539dca28ea5ec"
+                "reference": "54a34cfeecc27dc88b849d1e003674159dc88c5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/symfony-bundle-configuration/zipball/830cba924b1777915bbc6e81a7c539dca28ea5ec",
-                "reference": "830cba924b1777915bbc6e81a7c539dca28ea5ec",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-configuration/zipball/54a34cfeecc27dc88b849d1e003674159dc88c5f",
+                "reference": "54a34cfeecc27dc88b849d1e003674159dc88c5f",
                 "shasum": ""
             },
             "require": {
@@ -2352,22 +2352,22 @@
             "description": "Spipu Configuration Bundle",
             "support": {
                 "issues": "https://github.com/spipu/symfony-bundle-configuration/issues",
-                "source": "https://github.com/spipu/symfony-bundle-configuration/tree/v2.1.2"
+                "source": "https://github.com/spipu/symfony-bundle-configuration/tree/v2.3.0"
             },
-            "time": "2023-01-20T07:55:15+00:00"
+            "time": "2023-03-20T10:43:22+00:00"
         },
         {
             "name": "spipu/core-bundle",
-            "version": "v2.0.3",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/symfony-bundle-core.git",
-                "reference": "cc808fe40a9b6460081aa67ca310c9e3d1ebf9c9"
+                "reference": "0ef2caf0e580246f647d300f00e5ea82ec72c5ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/symfony-bundle-core/zipball/cc808fe40a9b6460081aa67ca310c9e3d1ebf9c9",
-                "reference": "cc808fe40a9b6460081aa67ca310c9e3d1ebf9c9",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-core/zipball/0ef2caf0e580246f647d300f00e5ea82ec72c5ee",
+                "reference": "0ef2caf0e580246f647d300f00e5ea82ec72c5ee",
                 "shasum": ""
             },
             "require": {
@@ -2396,22 +2396,68 @@
             "description": "Spipu Core Bundle",
             "support": {
                 "issues": "https://github.com/spipu/symfony-bundle-core/issues",
-                "source": "https://github.com/spipu/symfony-bundle-core/tree/v2.0.3"
+                "source": "https://github.com/spipu/symfony-bundle-core/tree/v2.3.0"
             },
-            "time": "2022-11-10T23:28:16+00:00"
+            "time": "2023-03-20T10:43:54+00:00"
         },
         {
-            "name": "spipu/process-bundle",
-            "version": "v2.0.8",
+            "name": "spipu/dashboard-bundle",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/spipu/symfony-bundle-process.git",
-                "reference": "8858b5e3654420506723f767869cc33500a4f07d"
+                "url": "https://github.com/spipu/symfony-bundle-dashboard.git",
+                "reference": "fd1885ba090492544f0e52f9b0eb30cb63097afb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/symfony-bundle-process/zipball/8858b5e3654420506723f767869cc33500a4f07d",
-                "reference": "8858b5e3654420506723f767869cc33500a4f07d",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-dashboard/zipball/fd1885ba090492544f0e52f9b0eb30cb63097afb",
+                "reference": "fd1885ba090492544f0e52f9b0eb30cb63097afb",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "spipu/ui-bundle": "^2.0",
+                "symfony/framework-bundle": "^5.4"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Spipu\\DashboardBundle\\": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "laurent Minguet",
+                    "email": "contact@minguet.fr"
+                },
+                {
+                    "name": "Charles Sannier",
+                    "email": "charlessannier@gmail.com"
+                }
+            ],
+            "description": "Spipu Dashboard Bundle",
+            "support": {
+                "issues": "https://github.com/spipu/symfony-bundle-dashboard/issues",
+                "source": "https://github.com/spipu/symfony-bundle-dashboard/tree/v2.3.0"
+            },
+            "time": "2023-03-20T15:57:04+00:00"
+        },
+        {
+            "name": "spipu/process-bundle",
+            "version": "v2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spipu/symfony-bundle-process.git",
+                "reference": "80d1b148f29882147aefa0ea8e893b3b0c5509ac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-process/zipball/80d1b148f29882147aefa0ea8e893b3b0c5509ac",
+                "reference": "80d1b148f29882147aefa0ea8e893b3b0c5509ac",
                 "shasum": ""
             },
             "require": {
@@ -2440,22 +2486,22 @@
             "description": "Spipu Process Bundle",
             "support": {
                 "issues": "https://github.com/spipu/symfony-bundle-process/issues",
-                "source": "https://github.com/spipu/symfony-bundle-process/tree/v2.0.8"
+                "source": "https://github.com/spipu/symfony-bundle-process/tree/v2.3.0"
             },
-            "time": "2023-03-03T14:30:02+00:00"
+            "time": "2023-03-20T15:51:39+00:00"
         },
         {
             "name": "spipu/ui-bundle",
-            "version": "v2.2.0",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/symfony-bundle-ui.git",
-                "reference": "a4e6c1cd52cf68183f6fde26a0250366f27a7278"
+                "reference": "7f1d1882ed79d6c93b28907ca2fc7330075a0520"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/symfony-bundle-ui/zipball/a4e6c1cd52cf68183f6fde26a0250366f27a7278",
-                "reference": "a4e6c1cd52cf68183f6fde26a0250366f27a7278",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-ui/zipball/7f1d1882ed79d6c93b28907ca2fc7330075a0520",
+                "reference": "7f1d1882ed79d6c93b28907ca2fc7330075a0520",
                 "shasum": ""
             },
             "require": {
@@ -2485,22 +2531,22 @@
             "description": "Spipu User Interface Bundle",
             "support": {
                 "issues": "https://github.com/spipu/symfony-bundle-ui/issues",
-                "source": "https://github.com/spipu/symfony-bundle-ui/tree/v2.2.0"
+                "source": "https://github.com/spipu/symfony-bundle-ui/tree/v2.3.0"
             },
-            "time": "2023-03-17T09:49:59+00:00"
+            "time": "2023-03-20T10:43:54+00:00"
         },
         {
             "name": "spipu/user-bundle",
-            "version": "v2.0.3",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/symfony-bundle-user.git",
-                "reference": "5554574d471acfcd0495be4d7141ed52f232a54c"
+                "reference": "1253a9d6dbc79e99a5b85afbf10979888f34fc39"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/symfony-bundle-user/zipball/5554574d471acfcd0495be4d7141ed52f232a54c",
-                "reference": "5554574d471acfcd0495be4d7141ed52f232a54c",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-user/zipball/1253a9d6dbc79e99a5b85afbf10979888f34fc39",
+                "reference": "1253a9d6dbc79e99a5b85afbf10979888f34fc39",
                 "shasum": ""
             },
             "require": {
@@ -2526,9 +2572,9 @@
             "description": "Spipu User Security Bundle",
             "support": {
                 "issues": "https://github.com/spipu/symfony-bundle-user/issues",
-                "source": "https://github.com/spipu/symfony-bundle-user/tree/v2.0.3"
+                "source": "https://github.com/spipu/symfony-bundle-user/tree/v2.3.0"
             },
-            "time": "2022-09-13T07:49:35+00:00"
+            "time": "2023-03-20T10:43:54+00:00"
         },
         {
             "name": "symfony/asset",

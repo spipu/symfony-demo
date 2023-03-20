@@ -1,0 +1,9 @@
+spipu:
+    dashboard:
+        source:
+            user-count:
+                label: "User - count (nb)"
+                title: "User - count (nb)"
+            task-count:
+                label: "Tasks - count(nb)"
+                title: "Tasks - count(nb) %period"

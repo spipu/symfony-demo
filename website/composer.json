@@ -27,6 +27,7 @@
         "spipu/ui-bundle": "*",
         "spipu/user-bundle": "*",
         "spipu/process-bundle": "*",
+        "spipu/dashboard-bundle": "*",
         "symfony/asset": "*",
         "symfony/console": "*",
         "symfony/expression-language": "*",

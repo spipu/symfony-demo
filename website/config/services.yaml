@@ -60,3 +60,8 @@ services:
             - '\App\Entity\User'
             - true
             - true
+
+    App\WidgetSource\:
+        resource: '../src/App/WidgetSource/*'
+        tags: [ 'spipu.widget.source' ]
+        autowire: true
