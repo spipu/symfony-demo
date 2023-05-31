@@ -5,6 +5,7 @@ spipu_process:
         options:
             can_be_put_in_queue: true
             can_be_rerun_automatically: false
+            automatic_report: true
 
         steps:
             hello_world:
