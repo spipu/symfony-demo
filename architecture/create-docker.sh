@@ -2,14 +2,28 @@
 
 set -e
 
-bashSource=$(readlink -f "${BASH_SOURCE[0]}")
+if [[ -d "/opt/homebrew/opt/gnu-sed/libexec/gnubin" ]]; then
+  PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+  bashSource=$(greadlink -f "${BASH_SOURCE[0]}")
+elif [[ -d "/opt/local/opt/gnu-sed/libexec/gnubin" ]]; then
+  PATH="/opt/local/opt/gnu-sed/libexec/gnubin:$PATH"
+  bashSource=$(greadlink -f "${BASH_SOURCE[0]}")
+else
+  bashSource=$(readlink -f "${BASH_SOURCE[0]}")
+fi
+
 cd "$(dirname "$bashSource")"
 cd ../
 
 ENV_TYPE="docker"
 source ./architecture/scripts/include/init.sh
 
-SSH_PUB=$(cat ~/.ssh/id_rsa.pub)
+# Parameters SSH
+if [[ -f "$HOME/.ssh/id_ed25519.pub" ]]; then
+    SSH_PUB=$(cat ~/.ssh/id_ed25519.pub)
+else
+    SSH_PUB=$(cat ~/.ssh/id_rsa.pub)
+fi
 
 cd ./architecture/vm/
 
@@ -21,8 +35,8 @@ ssh-keygen -R "${ENV_IP}"   > /dev/null
 
 echo " => Prepare /etc/hosts file"
 sudo sed "/${ENV_HOST}/d" -i /etc/hosts
-echo "# Added for docker ${ENV_HOST}" | sudo tee -a /etc/hosts > /dev/null
-echo "${ENV_IP} ${ENV_HOST}"          | sudo tee -a /etc/hosts > /dev/null
+echo "# Added for docker ${ENV_HOST}"                  | sudo tee -a /etc/hosts > /dev/null
+echo "${ENV_IP} ${ENV_HOST} ${ENV_HOST_SUB_HOSTS_TXT}" | sudo tee -a /etc/hosts > /dev/null
 
 echo " => Docker"
 sudo docker-compose down -v

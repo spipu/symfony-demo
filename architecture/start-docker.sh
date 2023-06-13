@@ -2,7 +2,16 @@
 
 set -e
 
-bashSource=$(readlink -f "${BASH_SOURCE[0]}")
+if [[ -d "/opt/homebrew/opt/gnu-sed/libexec/gnubin" ]]; then
+  PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+  bashSource=$(greadlink -f "${BASH_SOURCE[0]}")
+elif [[ -d "/opt/local/opt/gnu-sed/libexec/gnubin" ]]; then
+  PATH="/opt/local/opt/gnu-sed/libexec/gnubin:$PATH"
+  bashSource=$(greadlink -f "${BASH_SOURCE[0]}")
+else
+  bashSource=$(readlink -f "${BASH_SOURCE[0]}")
+fi
+
 cd "$(dirname "$bashSource")"
 cd ../
 

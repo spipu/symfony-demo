@@ -1,3 +1,5 @@
 name={{ENV_NAME}}
-template=ubuntu-2004-focal
+template=ubuntu-2204-jammy
 mount=./../../:/var/www/{{ENV_NAME}}
+host={{ENV_NAME}}.lxc
+vhosts={{ENV_SUB_HOSTS}}

@@ -9,11 +9,7 @@ Copy the `architecture` folder.
 
 Modify the project name (it must contain only chars, no minus or underscore) in the `architecture/conf/env.sh` file.
 
-Create the symfony project with the following script:
-
-```bash
-./architecture/new-project.sh
-```
+Create a new symfony 5 project with symfony cli
 
 Create the dev environment:
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-PHP_VERSION="7.4"
-PHP_FOLDER="php/7.4"
+PHP_VERSION="8.1"
+PHP_FOLDER="php/8.1"
 
 showMessage " > PHP - Install ${PHP_VERSION}"
 
@@ -14,7 +14,6 @@ apt-get -qq -y install \
     php${PHP_VERSION}-gd \
     php${PHP_VERSION}-iconv \
     php${PHP_VERSION}-intl \
-    php${PHP_VERSION}-json \
     php${PHP_VERSION}-mbstring \
     php${PHP_VERSION}-mysql \
     php${PHP_VERSION}-pdo \

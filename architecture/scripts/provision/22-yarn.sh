@@ -1,9 +1,11 @@
 #!/bin/bash
 
+showMessage " > Yarn - Repo"
+
+curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | tee /usr/share/keyrings/yarnkey.gpg > /dev/null
+echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | tee /etc/apt/sources.list.d/yarn.list > /dev/null
+apt-get -qq update  > /dev/null
+
 showMessage " > Yarn - Install"
 
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - > /dev/null 2>&1
-echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list
-
-apt-get -qq update  > /dev/null
 apt-get -qq install -y yarn    > /dev/null

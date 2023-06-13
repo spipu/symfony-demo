@@ -72,6 +72,7 @@ function remplaceVariablesInFile() {
     # Symfony
     remplaceVariableInFile "$FILE" "APP_SECRET" "$APP_SECRET"
     remplaceVariableInFile "$FILE" "APP_MAILER" "$APP_MAILER"
+    remplaceVariableInFile "$FILE" "APP_SESSION_HANDLER" "$APP_SESSION_HANDLER"
 }
 
 function remplaceVariableInFile() {

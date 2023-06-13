@@ -1,3 +1,3 @@
 framework:
     mailer:
-        dsn: '%APP_SETTINGS_MAILER_URL%'
+        dsn: '%APP_SETTINGS_MAILER_DSN%'

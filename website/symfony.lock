@@ -150,20 +150,11 @@
     "phpdocumentor/type-resolver": {
         "version": "0.4.0"
     },
-    "phploc/phploc": {
-        "version": "5.0.0"
-    },
     "phpmd/phpmd": {
         "version": "2.6.1"
     },
     "phpmetrics/phpmetrics": {
         "version": "v2.4.1"
-    },
-    "phpunit/php-file-iterator": {
-        "version": "2.0.2"
-    },
-    "phpunit/php-timer": {
-        "version": "2.1.2"
     },
     "predis/predis": {
         "version": "v1.1.1"
@@ -183,14 +174,17 @@
     "psr/log": {
         "version": "1.1.0"
     },
-    "sebastian/cli-parser": {
-        "version": "1.0.1"
-    },
-    "sebastian/phpcpd": {
-        "version": "4.1.0"
-    },
-    "sebastian/version": {
-        "version": "2.0.1"
+    "qossmic/deptrac-shim": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "0.19",
+            "ref": "3c3daab46226c37fc14e10faf81df737a3039d96"
+        },
+        "files": [
+            "deptrac.yaml"
+        ]
     },
     "sensio/framework-extra-bundle": {
         "version": "5.2",

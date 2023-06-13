@@ -1,5 +1,6 @@
 name={{ENV_NAME}}
-template=ubuntu-20_04-focal
-host={{ENV_NAME}}.lxc
+template=ubuntu-22_04-jammy
 delivery-user={{ENV_USER}}
 mount=./../../:/var/www/{{ENV_NAME}}
+host={{ENV_HOST}}
+{{ENV_SUB_HOSTS}}

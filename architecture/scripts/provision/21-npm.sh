@@ -1,10 +1,19 @@
 #!/bin/bash
 
+showMessage " > Node - Repository"
+
+curl -fsSL https://deb.nodesource.com/setup_18.x | bash - > /dev/null
+apt-get -qq update  > /dev/null
+
 showMessage " > Node - Install"
 
-curl -sSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -  > /dev/null 2>&1
-echo 'deb https://deb.nodesource.com/node_14.x focal main'     >  /etc/apt/sources.list.d/nodesource.list
-echo 'deb-src https://deb.nodesource.com/node_14.x focal main' >> /etc/apt/sources.list.d/nodesource.list
-
-apt-get -qq update  > /dev/null
 apt-get -qq install -y nodejs > /dev/null
+npm install -g npm@9 > /dev/null
+
+showMessage " > Node - Version"
+
+node --version
+
+showMessage " > Npm - Version"
+
+npm --version

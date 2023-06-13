@@ -11,7 +11,7 @@ sudo rm -rf ./${WEB_FOLDER}/var
 echo ""
 
 HOUR=$(date +%H:%M:%S)
-echo "[${HOUR}]===[PREPAPE ALL]==="
+echo "[${HOUR}]===[PREPARE ALL]==="
 
 ssh root@${ENV_HOST} -p ${ENV_SSH_PORT} $ENV_FOLDER/architecture/scripts/prepare-all.sh "$ENV_TYPE"
 

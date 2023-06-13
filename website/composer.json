@@ -5,7 +5,7 @@
     "description": "A demo to test bundles",
     "prefer-stable": true,
     "require": {
-        "php": "^7.4",
+        "php": "^8.1",
         "ext-ctype": "*",
         "ext-curl": "*",
         "ext-iconv": "*",
@@ -55,12 +55,12 @@
         "twig/twig": "^3.0"
     },
     "require-dev": {
+        "qossmic/deptrac-shim": "*",
         "edgedesign/phpqa": "*",
         "php-parallel-lint/php-parallel-lint": "*",
         "pdepend/pdepend": "*",
         "phpmd/phpmd": "*",
         "phpmetrics/phpmetrics": "*",
-        "sebastian/phpcpd": "*",
         "squizlabs/php_codesniffer": "*",
         "symfony/browser-kit": "*",
         "symfony/css-selector": "*",
@@ -78,7 +78,7 @@
         },
         "sort-packages": true,
         "platform": {
-            "php": "7.4.3",
+            "php": "8.1.2",
             "ext-bcmath": "1",
             "ext-ctype": "1",
             "ext-gd": "1",
@@ -117,7 +117,9 @@
     "replace": {
         "symfony/polyfill-ctype": "*",
         "symfony/polyfill-iconv": "*",
-        "symfony/polyfill-php72": "*"
+        "symfony/polyfill-php72": "*",
+        "sebastian/phpcpd": "*",
+        "phploc/phploc": "*"
     },
     "scripts": {
         "auto-scripts": {

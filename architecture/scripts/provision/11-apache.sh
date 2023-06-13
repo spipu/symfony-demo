@@ -25,7 +25,9 @@ fi
 rm -f /etc/apache2/sites-available/*
 rm -f /etc/apache2/sites-enabled/*
 
-createFromTemplate "$CONFIG_FOLDER/apache/virtualhost.conf" "/etc/apache2/sites-available/$ENV_NAME.conf"
+createFromTemplate "$CONFIG_FOLDER/apache/virtualhost.conf"                "/etc/apache2/sites-available/$ENV_NAME.conf"
+createFromTemplate "$CONFIG_FOLDER/apache/virtualhost-common-https.conf"   "/etc/apache2/sites-available/$ENV_NAME-common-https.conf"
+createFromTemplate "$CONFIG_FOLDER/apache/virtualhost-common-symfony.conf" "/etc/apache2/sites-available/$ENV_NAME-common-symfony.conf"
 ln -s "/etc/apache2/sites-available/$ENV_NAME.conf" /etc/apache2/sites-enabled/
 
 showMessage " > Apache - Prepare Document Root"

@@ -1,7 +1,7 @@
 doctrine:
     dbal:
         driver: 'pdo_mysql'
-        server_version: 'mariadb-10.4.17'
+        server_version: 'mariadb-10.9.7'
         url: '%APP_SETTINGS_DATABASE_URL%'
 
     orm:
@@ -11,7 +11,6 @@ doctrine:
         mappings:
             App:
                 is_bundle: false
-                type: annotation
                 dir: '%kernel.project_dir%/src/App/Entity'
                 prefix: 'App\Entity'
                 alias: App

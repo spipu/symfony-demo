@@ -9,14 +9,8 @@ use Spipu\DashboardBundle\Service\Ui\Definition\DashboardDefinitionInterface;
 
 class AdminDashboard implements DashboardDefinitionInterface
 {
-    /**
-     * @var Dashboard\Dashboard|null
-     */
     private ?Dashboard\Dashboard $definition = null;
 
-    /**
-     * @return Dashboard\Dashboard
-     */
     public function getDefinition(): Dashboard\Dashboard
     {
         if ($this->definition === null) {
@@ -26,9 +20,6 @@ class AdminDashboard implements DashboardDefinitionInterface
         return $this->definition;
     }
 
-    /**
-     * @return Dashboard\Dashboard
-     */
     private function prepareDefinition(): Dashboard\Dashboard
     {
         return (new Dashboard\Dashboard('admin'))
@@ -37,9 +28,6 @@ class AdminDashboard implements DashboardDefinitionInterface
         ;
     }
 
-    /**
-     * @return array
-     */
     public function getDefaultConfig(): array
     {
         return [

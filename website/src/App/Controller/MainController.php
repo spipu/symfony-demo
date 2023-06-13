@@ -17,16 +17,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * Class MainController
- * @Route("/")
- */
+#[Route(path: '/')]
 class MainController extends AbstractController
 {
-    /**
-     * @Route("/", name="app_home", methods="GET")
-     * @return Response
-     */
+    #[Route(path: '/', name: 'app_home', methods: "GET")]
     public function home(): Response
     {
         return $this->render('main/home.html.twig');

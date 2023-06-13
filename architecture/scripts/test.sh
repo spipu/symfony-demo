@@ -16,8 +16,7 @@ php -v | grep cli
 echo ""
 
 showMessage " => MySQL"
-export MYSQL_PWD=$DB_PASS
-mysql -h localhost -P 3306 -u $DB_USER $DB_NAME -N -e "SHOW DATABASES like \"$DB_NAME\";"
+mysql -h localhost -u"$DB_USER" -p"$DB_PASS" "$DB_NAME" -N -e "SHOW DATABASES like \"$DB_NAME\";"
 echo ""
 
 showMessage " => Redis - Cache"

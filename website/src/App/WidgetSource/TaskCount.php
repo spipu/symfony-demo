@@ -8,9 +8,6 @@ use Spipu\DashboardBundle\Entity\Source as Source;
 
 class TaskCount extends AbstractSource
 {
-    /**
-     * @return Source\SourceSql
-     */
     public function getDefinition(): Source\SourceSql
     {
         return (new Source\SourceSql("task-count", 'spipu_process_task'));

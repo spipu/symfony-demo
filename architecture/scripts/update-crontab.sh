@@ -21,3 +21,5 @@ cp "$CRONTAB_FILE" "$CRONTAB_FILE_REPLACED"
 remplaceVariablesInFile "$CRONTAB_FILE_REPLACED"
 
 sudo -u www-data crontab "$CRONTAB_FILE_REPLACED"
+
+showMessage "End"

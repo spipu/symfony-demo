@@ -1,0 +1,98 @@
+parameters:
+  paths:
+    - ./src
+  layers:
+    # MVC Layers
+    - name: MVC_Command
+      collectors:
+        - type: className
+          regex: Spipu\\[^\\]*\\Command\\.*
+    - name: MVC_Controller
+      collectors:
+        - type: className
+          regex: Spipu\\[^\\]*\\Controller\\.*
+    - name: MVC_Entity
+      collectors:
+        - type: className
+          regex: Spipu\\[^\\]*\\Entity\\.*
+    - name: MVC_Form
+      collectors:
+        - type: className
+          regex: Spipu\\[^\\]*\\Form\\[^\\]*$
+    - name: MVC_FormOptions
+      collectors:
+        - type: className
+          regex: Spipu\\[^\\]*\\Form\\Options\\.*
+    - name: MVC_Repository
+      collectors:
+        - type: className
+          regex: Spipu\\[^\\]*\\Repository\\.*
+    - name: MVC_Service
+      collectors:
+        - type: className
+          regex: Spipu\\[^\\]*\\(Service|Assets|Fixtures|Twig)\\.*
+    - name: MVC_Step
+      collectors:
+        - type: className
+          regex: Spipu\\[^\\]*\\Step\\.*
+    - name: MVC_Ui
+      collectors:
+        - type: className
+          regex: Spipu\\[^\\]*\\Ui\\.*
+    - name: MVC_Validator
+      collectors:
+        - type: className
+          regex: Spipu\\[^\\]*\\Validator\\.*
+
+  ruleset:
+    # MVC
+    MVC_Command:
+      - MVC_Entity
+      - MVC_Repository
+      - MVC_Service
+      - MVC_FormOptions
+    MVC_Controller:
+      - MVC_Entity
+      - MVC_Repository
+      - MVC_Service
+      - MVC_Ui
+      - MVC_Form
+      - MVC_FormOptions
+      - MVC_Validator
+    MVC_Entity:
+      - MVC_Validator
+      - MVC_FormOptions
+    MVC_Form:
+      - MVC_Entity
+      - MVC_FormOptions
+      - MVC_Repository
+      - MVC_Service
+    MVC_FormOptions:
+      - MVC_Entity
+      - MVC_Repository
+      - MVC_Service
+    MVC_Repository:
+      - MVC_Entity
+    MVC_Service:
+      - MVC_Entity
+      - MVC_Repository
+      - MVC_FormOptions
+      - MVC_Form
+    MVC_Step:
+      - MVC_Service
+      - MVC_Entity
+      - MVC_Repository
+      - MVC_FormOptions
+    MVC_Ui:
+      - MVC_Entity
+      - MVC_FormOptions
+      - MVC_Repository
+      - MVC_Service
+    MVC_Validator:
+      - MVC_Repository
+
+  formatters:
+    graphviz:
+      point_to_groups: true
+      groups: []
+      hidden_layers: []

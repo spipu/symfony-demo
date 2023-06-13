@@ -2,7 +2,7 @@
 
 DAEMON="/usr/sbin/mysqld"
 daemon_OPT=""
-DAEMONUSER="root"
+DAEMONUSER="mysql"
 daemon_NAME="mysqld"
 
 PATH="/sbin:/bin:/usr/sbin:/usr/bin"

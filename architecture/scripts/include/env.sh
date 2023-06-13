@@ -35,6 +35,7 @@ fi
 
 # Global Parameters
 source ./architecture/conf/env_all.sh
+ENV_ARCHITECTURE="amd64"
 
 # Local Parameters (for docker, because it can depend on the host OS)
 LOCAL_FILE="./architecture/conf/env.local.sh"
@@ -44,6 +45,7 @@ if [[ ! -f "${LOCAL_FILE}" ]]; then
     echo "# Docker Parameters"          >> ${LOCAL_FILE}
     echo "ENV_DOCKER_IP=\"127.0.50.1\"" >> ${LOCAL_FILE}
     echo "ENV_DOCKER_PORT_START=\"0\""  >> ${LOCAL_FILE}
+    echo "ENV_ARCHITECTURE=\"amd64\""   >> ${LOCAL_FILE}
 fi
 source ${LOCAL_FILE}
 
@@ -78,6 +80,22 @@ if [[ "${ENV_TYPE}" != "none" ]]; then
             remplaceVariableInFile "$FILE" "ENV_DOCKER_PORT_SSH"     "$(($ENV_DOCKER_PORT_START+22))"
             remplaceVariableInFile "$FILE" "ENV_DOCKER_PORT_MAILDEV" "$(($ENV_DOCKER_PORT_START+1080))"
         done
+
+        # Specific - LXD Hosts
+        vmFile="./architecture/vm/lxdfile"
+        for subHost in ${ENV_HOST_SUB_HOSTS[@]}; do
+            remplaceVariableInFile "${vmFile}" "ENV_SUB_HOSTS" "host=$subHost\n{{ENV_SUB_HOSTS}}"
+        done
+        remplaceVariableInFile "${vmFile}" "ENV_SUB_HOSTS" ""
+        sed -i 's/\\n/\n/g' "${vmFile}"
+
+        # Specific - LXC Hosts
+        vmFile="./architecture/vm/lxcfile"
+        for subHost in ${ENV_HOST_SUB_HOSTS[@]}; do
+            remplaceVariableInFile "${vmFile}" "ENV_SUB_HOSTS" "$subHost {{ENV_SUB_HOSTS}}"
+        done
+        remplaceVariableInFile "${vmFile}" "ENV_SUB_HOSTS" ""
+        sed -i 's/ *$//g' "${vmFile}"
     fi
 fi
 

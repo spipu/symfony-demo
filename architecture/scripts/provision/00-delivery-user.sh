@@ -23,7 +23,7 @@ fi
 showMessage " > Delivery User - acl"
 
 mkdir -p /etc/sudoers.d/
-ALLOWED_SERVICES='/bin/systemctl reload php7.4-fpm.service'
+ALLOWED_SERVICES='/bin/systemctl reload php8.1-fpm.service'
 sh -c "echo 'Cmnd_Alias  DELIVERYSERVICEALLOWED=$ALLOWED_SERVICES'  >  /etc/sudoers.d/$ENV_USER"
 sh -c "echo 'Runas_Alias DELIVERYSERVERACCOUNTS=www-data'           >> /etc/sudoers.d/$ENV_USER"
 sh -c "echo '$ENV_USER ALL=(DELIVERYSERVERACCOUNTS) NOPASSWD: ALL'  >> /etc/sudoers.d/$ENV_USER"
