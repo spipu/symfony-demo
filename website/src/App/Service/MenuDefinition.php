@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace App\Service;
 
-use Spipu\ConfigurationBundle\Service\Manager as ConfigurationManager;
+use Spipu\ConfigurationBundle\Service\ConfigurationManager;
 use Spipu\UiBundle\Entity\Menu\Item;
 use Spipu\UiBundle\Service\Menu\DefinitionInterface;
 
