@@ -1,7 +1,7 @@
 doctrine:
     dbal:
         driver: 'pdo_mysql'
-        server_version: 'mariadb-10.9.7'
+        server_version: 'mariadb-10.11.5'
         url: '%APP_SETTINGS_DATABASE_URL%'
 
     orm:

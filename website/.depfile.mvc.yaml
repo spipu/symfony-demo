@@ -6,43 +6,43 @@ parameters:
     - name: MVC_Command
       collectors:
         - type: className
-          regex: Spipu\\[^\\]*\\Command\\.*
+          regex: App\\Command\\.*
     - name: MVC_Controller
       collectors:
         - type: className
-          regex: Spipu\\[^\\]*\\Controller\\.*
+          regex: App\\Controller\\.*
     - name: MVC_Entity
       collectors:
         - type: className
-          regex: Spipu\\[^\\]*\\Entity\\.*
+          regex: App\\Entity\\.*
     - name: MVC_Form
       collectors:
         - type: className
-          regex: Spipu\\[^\\]*\\Form\\[^\\]*$
+          regex: App\\Form\\[^\\]*$
     - name: MVC_FormOptions
       collectors:
         - type: className
-          regex: Spipu\\[^\\]*\\Form\\Options\\.*
+          regex: App\\Form\\Options\\.*
     - name: MVC_Repository
       collectors:
         - type: className
-          regex: Spipu\\[^\\]*\\Repository\\.*
+          regex: App\\Repository\\.*
     - name: MVC_Service
       collectors:
         - type: className
-          regex: Spipu\\[^\\]*\\(Service|Assets|Fixtures|Twig)\\.*
+          regex: App\\(Service|Assets|Fixtures|Twig)\\.*
     - name: MVC_Step
       collectors:
         - type: className
-          regex: Spipu\\[^\\]*\\Step\\.*
+          regex: App\\Step\\.*
     - name: MVC_Ui
       collectors:
         - type: className
-          regex: Spipu\\[^\\]*\\Ui\\.*
+          regex: App\\Ui\\.*
     - name: MVC_Validator
       collectors:
         - type: className
-          regex: Spipu\\[^\\]*\\Validator\\.*
+          regex: App\\Validator\\.*
 
   ruleset:
     # MVC

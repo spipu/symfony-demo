@@ -2,7 +2,7 @@
 
 showMessage " > MySQL - MariaDB Repo"
 
-curl -LsS https://r.mariadb.com/downloads/mariadb_repo_setup | bash -s -- --mariadb-server-version="mariadb-10.9" > /dev/null
+curl -LsS https://r.mariadb.com/downloads/mariadb_repo_setup | bash -s -- --mariadb-server-version="mariadb-10.11" > /dev/null
 
 apt-get -qq update > /dev/null
 
