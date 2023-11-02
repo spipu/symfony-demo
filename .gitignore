@@ -1,4 +1,5 @@
 /.idea
 /quality/bin
 /quality/build
+/quality/bin
 /website/config/crontab.local
