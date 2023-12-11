@@ -39,6 +39,12 @@ rm -rf ./var/* > /dev/null 2>&1
 sudo -u www-data rm -rf ./var/* > /dev/null 2>&1
 set -e
 
+showMessage "Clean Spipu Configuration Cache"
+sudo -u www-data ./bin/console spipu:configuration:clear-cache
+
+showMessage "Clean Spipu UI Default Grids"
+sudo -u www-data ./bin/console spipu:ui:grid-config:reset
+
 showMessage "Fixtures"
 sudo -u www-data ./bin/console spipu:fixtures:load
 
