@@ -1,6 +1,6 @@
 imports:
-- { resource: "@SpipuConfigurationBundle/Resources/config/spipu_configuration.yaml" }
-- { resource: "@SpipuProcessBundle/Resources/config/spipu_configuration.yaml" }
+- { resource: "@SpipuConfigurationBundle/config/spipu_configuration.yaml" }
+- { resource: "@SpipuProcessBundle/config/spipu_configuration.yaml" }
 
 spipu_configuration:
     app.website.name:
@@ -15,9 +15,26 @@ spipu_configuration:
     test.type.file:
         type: file
         required: false
-        file_type: ['jpeg', 'png']
-        help: "Only JPEG and PNG files are allowed"
+        file_type: ['jpeg', 'jpg', 'png']
+        help: "Only JPG and PNG files are allowed"
 
     test.type.password:
         type:     password
         required: true
+
+    test.type.text:
+        type:     string
+        required: true
+        scoped:   true
+        default:  "My text"
+
+    test.type.select:
+        type:     select
+        options:  Spipu\UiBundle\Form\Options\YesNo
+        required: true
+        default:  "1"
+
+    test.type.boolean:
+        type:     boolean
+        required: true
+        default:  "0"

@@ -6,7 +6,6 @@ framework:
         # See https://symfony.com/doc/current/routing.html#generating-urls-in-commands
         #default_uri: http://localhost
 
-#  To not throw an exception in the routing generator.
 when@prod:
     framework:
         router:
