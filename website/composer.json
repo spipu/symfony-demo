@@ -18,7 +18,7 @@
         "doctrine/annotations": "*",
         "doctrine/doctrine-bundle": "*",
         "doctrine/doctrine-migrations-bundle": "*",
-        "doctrine/orm": "*",
+        "doctrine/orm": "^2.7",
         "phpdocumentor/reflection-docblock": "*",
         "predis/predis": "*",
         "sensio/framework-extra-bundle": "*",
