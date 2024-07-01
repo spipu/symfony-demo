@@ -16,7 +16,7 @@
         "ext-zip": "*",
         "doctrine/doctrine-bundle": "*",
         "doctrine/doctrine-migrations-bundle": "*",
-        "doctrine/orm": "*",
+        "doctrine/orm": "^2.7",
         "phpdocumentor/reflection-docblock": "*",
         "predis/predis": "*",
         "spipu/configuration-bundle": "*",
