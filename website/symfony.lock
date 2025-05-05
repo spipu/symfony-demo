@@ -29,9 +29,6 @@
     "dflydev/dot-access-data": {
         "version": "v1.1.0"
     },
-    "doctrine/cache": {
-        "version": "v1.8.0"
-    },
     "doctrine/collections": {
         "version": "v1.6.2"
     },
