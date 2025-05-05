@@ -20,7 +20,7 @@
         "doctrine/doctrine-migrations-bundle": "*",
         "doctrine/orm": "^2.7",
         "phpdocumentor/reflection-docblock": "*",
-        "predis/predis": "*",
+        "predis/predis": "^2.0",
         "sensio/framework-extra-bundle": "*",
         "spipu/configuration-bundle": "*",
         "spipu/core-bundle": "*",
