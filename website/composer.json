@@ -18,7 +18,7 @@
         "doctrine/doctrine-migrations-bundle": "*",
         "doctrine/orm": "*",
         "phpdocumentor/reflection-docblock": "*",
-        "predis/predis": "*",
+        "predis/predis": "^2.0",
         "spipu/configuration-bundle": "*",
         "spipu/core-bundle": "*",
         "spipu/ui-bundle": "*",
