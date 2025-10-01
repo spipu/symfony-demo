@@ -60,7 +60,7 @@
         "pdepend/pdepend": "*",
         "phpmd/phpmd": "*",
         "phpmetrics/phpmetrics": "*",
-        "squizlabs/php_codesniffer": "*",
+        "squizlabs/php_codesniffer": "^3.0",
         "symfony/browser-kit": "*",
         "symfony/css-selector": "*",
         "symfony/debug-bundle": "*",
