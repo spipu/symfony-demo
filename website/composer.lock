@@ -695,16 +695,16 @@
         },
         {
             "name": "doctrine/doctrine-migrations-bundle",
-            "version": "3.6.0",
+            "version": "3.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineMigrationsBundle.git",
-                "reference": "49ecc564568d7da101779112579e78b677fbc94a"
+                "reference": "1e380c6dd8ac8488217f39cff6b77e367f1a644b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineMigrationsBundle/zipball/49ecc564568d7da101779112579e78b677fbc94a",
-                "reference": "49ecc564568d7da101779112579e78b677fbc94a",
+                "url": "https://api.github.com/repos/doctrine/DoctrineMigrationsBundle/zipball/1e380c6dd8ac8488217f39cff6b77e367f1a644b",
+                "reference": "1e380c6dd8ac8488217f39cff6b77e367f1a644b",
                 "shasum": ""
             },
             "require": {
@@ -760,7 +760,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/DoctrineMigrationsBundle/issues",
-                "source": "https://github.com/doctrine/DoctrineMigrationsBundle/tree/3.6.0"
+                "source": "https://github.com/doctrine/DoctrineMigrationsBundle/tree/3.7.0"
             },
             "funding": [
                 {
@@ -776,7 +776,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-11-07T19:40:03+00:00"
+            "time": "2025-11-15T19:02:59+00:00"
         },
         {
             "name": "doctrine/event-manager",
@@ -1834,16 +1834,16 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "5.6.3",
+            "version": "5.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "94f8051919d1b0369a6bcc7931d679a511c03fe9"
+                "reference": "90a04bcbf03784066f16038e87e23a0a83cee3c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/94f8051919d1b0369a6bcc7931d679a511c03fe9",
-                "reference": "94f8051919d1b0369a6bcc7931d679a511c03fe9",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/90a04bcbf03784066f16038e87e23a0a83cee3c2",
+                "reference": "90a04bcbf03784066f16038e87e23a0a83cee3c2",
                 "shasum": ""
             },
             "require": {
@@ -1892,22 +1892,22 @@
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
             "support": {
                 "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues",
-                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/5.6.3"
+                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/5.6.4"
             },
-            "time": "2025-08-01T19:43:32+00:00"
+            "time": "2025-11-17T21:13:10+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "1.10.0",
+            "version": "1.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "679e3ce485b99e84c775d28e2e96fade9a7fb50a"
+                "reference": "f626740b38009078de0dc8b2b9dc4e7f749c6eba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/679e3ce485b99e84c775d28e2e96fade9a7fb50a",
-                "reference": "679e3ce485b99e84c775d28e2e96fade9a7fb50a",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/f626740b38009078de0dc8b2b9dc4e7f749c6eba",
+                "reference": "f626740b38009078de0dc8b2b9dc4e7f749c6eba",
                 "shasum": ""
             },
             "require": {
@@ -1950,9 +1950,9 @@
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "support": {
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
-                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.10.0"
+                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.11.1"
             },
-            "time": "2024-11-09T15:12:26+00:00"
+            "time": "2025-11-21T11:31:57+00:00"
         },
         {
             "name": "phpstan/phpdoc-parser",
@@ -2003,16 +2003,16 @@
         },
         {
             "name": "predis/predis",
-            "version": "v2.4.0",
+            "version": "v2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/predis/predis.git",
-                "reference": "f49e13ee3a2a825631562aa0223ac922ec5d058b"
+                "reference": "07105e050622ed80bd60808367ced9e379f31530"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/predis/predis/zipball/f49e13ee3a2a825631562aa0223ac922ec5d058b",
-                "reference": "f49e13ee3a2a825631562aa0223ac922ec5d058b",
+                "url": "https://api.github.com/repos/predis/predis/zipball/07105e050622ed80bd60808367ced9e379f31530",
+                "reference": "07105e050622ed80bd60808367ced9e379f31530",
                 "shasum": ""
             },
             "require": {
@@ -2053,7 +2053,7 @@
             ],
             "support": {
                 "issues": "https://github.com/predis/predis/issues",
-                "source": "https://github.com/predis/predis/tree/v2.4.0"
+                "source": "https://github.com/predis/predis/tree/v2.4.1"
             },
             "funding": [
                 {
@@ -2061,7 +2061,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-04-30T15:16:02+00:00"
+            "time": "2025-11-12T18:00:11+00:00"
         },
         {
             "name": "psr/cache",
@@ -2479,16 +2479,16 @@
         },
         {
             "name": "spipu/dashboard-bundle",
-            "version": "v2.4.4",
+            "version": "v2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/symfony-bundle-dashboard.git",
-                "reference": "403b5e22b845d9270da4f38044492413f55df4d4"
+                "reference": "f8f356157912b51ead5d7d8dc47222347d18fe2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/symfony-bundle-dashboard/zipball/403b5e22b845d9270da4f38044492413f55df4d4",
-                "reference": "403b5e22b845d9270da4f38044492413f55df4d4",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-dashboard/zipball/f8f356157912b51ead5d7d8dc47222347d18fe2d",
+                "reference": "f8f356157912b51ead5d7d8dc47222347d18fe2d",
                 "shasum": ""
             },
             "require": {
@@ -2520,22 +2520,22 @@
             "description": "Spipu Dashboard Bundle",
             "support": {
                 "issues": "https://github.com/spipu/symfony-bundle-dashboard/issues",
-                "source": "https://github.com/spipu/symfony-bundle-dashboard/tree/v2.4.4"
+                "source": "https://github.com/spipu/symfony-bundle-dashboard/tree/v2.5.0"
             },
-            "time": "2025-02-05T15:25:33+00:00"
+            "time": "2025-11-20T15:58:36+00:00"
         },
         {
             "name": "spipu/process-bundle",
-            "version": "v2.4.11",
+            "version": "v2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/symfony-bundle-process.git",
-                "reference": "24970e96e500b662eb297d0ba67e3e0d89b3ae46"
+                "reference": "9d67ee4469122a283ffbf4a3d19b3d5e406d6aa8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/symfony-bundle-process/zipball/24970e96e500b662eb297d0ba67e3e0d89b3ae46",
-                "reference": "24970e96e500b662eb297d0ba67e3e0d89b3ae46",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-process/zipball/9d67ee4469122a283ffbf4a3d19b3d5e406d6aa8",
+                "reference": "9d67ee4469122a283ffbf4a3d19b3d5e406d6aa8",
                 "shasum": ""
             },
             "require": {
@@ -2566,22 +2566,22 @@
             "description": "Spipu Process Bundle",
             "support": {
                 "issues": "https://github.com/spipu/symfony-bundle-process/issues",
-                "source": "https://github.com/spipu/symfony-bundle-process/tree/v2.4.11"
+                "source": "https://github.com/spipu/symfony-bundle-process/tree/v2.5.0"
             },
-            "time": "2025-11-12T17:28:07+00:00"
+            "time": "2025-11-20T17:49:06+00:00"
         },
         {
             "name": "spipu/ui-bundle",
-            "version": "v2.4.8",
+            "version": "v2.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/symfony-bundle-ui.git",
-                "reference": "78dd0254c368d900d81300cbb0ae987e2820d899"
+                "reference": "57b23424ab58441d4ffb32c360461962cbce0a55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/symfony-bundle-ui/zipball/78dd0254c368d900d81300cbb0ae987e2820d899",
-                "reference": "78dd0254c368d900d81300cbb0ae987e2820d899",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-ui/zipball/57b23424ab58441d4ffb32c360461962cbce0a55",
+                "reference": "57b23424ab58441d4ffb32c360461962cbce0a55",
                 "shasum": ""
             },
             "require": {
@@ -2612,9 +2612,9 @@
             "description": "Spipu User Interface Bundle",
             "support": {
                 "issues": "https://github.com/spipu/symfony-bundle-ui/issues",
-                "source": "https://github.com/spipu/symfony-bundle-ui/tree/v2.4.8"
+                "source": "https://github.com/spipu/symfony-bundle-ui/tree/v2.5.1"
             },
-            "time": "2025-07-03T13:45:05+00:00"
+            "time": "2025-11-21T11:14:09+00:00"
         },
         {
             "name": "spipu/user-bundle",
@@ -8343,16 +8343,16 @@
         },
         {
             "name": "consolidation/annotated-command",
-            "version": "4.10.2",
+            "version": "4.10.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/annotated-command.git",
-                "reference": "e550ea4f177f199e0e9451168342bf3f321d92b0"
+                "reference": "69d29da4acac31a43caa4cea13b6b948f4e5c56d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/e550ea4f177f199e0e9451168342bf3f321d92b0",
-                "reference": "e550ea4f177f199e0e9451168342bf3f321d92b0",
+                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/69d29da4acac31a43caa4cea13b6b948f4e5c56d",
+                "reference": "69d29da4acac31a43caa4cea13b6b948f4e5c56d",
                 "shasum": ""
             },
             "require": {
@@ -8393,9 +8393,9 @@
             "description": "Initialize Symfony Console commands from annotated command class methods.",
             "support": {
                 "issues": "https://github.com/consolidation/annotated-command/issues",
-                "source": "https://github.com/consolidation/annotated-command/tree/4.10.2"
+                "source": "https://github.com/consolidation/annotated-command/tree/4.10.4"
             },
-            "time": "2025-07-16T20:54:09+00:00"
+            "time": "2025-11-14T22:57:49+00:00"
         },
         {
             "name": "consolidation/config",
@@ -8511,16 +8511,16 @@
         },
         {
             "name": "consolidation/output-formatters",
-            "version": "4.6.1",
+            "version": "4.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/output-formatters.git",
-                "reference": "b6bcaf13bec9f4597e75ae853f3b3ac0d53b798d"
+                "reference": "dfc464c4d4a47594cac5eac01ce265e04b70cb94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/output-formatters/zipball/b6bcaf13bec9f4597e75ae853f3b3ac0d53b798d",
-                "reference": "b6bcaf13bec9f4597e75ae853f3b3ac0d53b798d",
+                "url": "https://api.github.com/repos/consolidation/output-formatters/zipball/dfc464c4d4a47594cac5eac01ce265e04b70cb94",
+                "reference": "dfc464c4d4a47594cac5eac01ce265e04b70cb94",
                 "shasum": ""
             },
             "require": {
@@ -8559,9 +8559,9 @@
             "description": "Format text by applying transformations provided by plug-in formatters.",
             "support": {
                 "issues": "https://github.com/consolidation/output-formatters/issues",
-                "source": "https://github.com/consolidation/output-formatters/tree/4.6.1"
+                "source": "https://github.com/consolidation/output-formatters/tree/4.7.0"
             },
-            "time": "2024-12-13T18:38:45+00:00"
+            "time": "2025-11-14T21:06:10+00:00"
         },
         {
             "name": "consolidation/robo",
@@ -8794,16 +8794,16 @@
         },
         {
             "name": "edgedesign/phpqa",
-            "version": "v1.27.0",
+            "version": "v1.27.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdgedesignCZ/phpqa.git",
-                "reference": "9737b48a7a4befdf24722ad111280712c3846075"
+                "reference": "33386db40705b238bc611a725943c1a4de12eca0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdgedesignCZ/phpqa/zipball/9737b48a7a4befdf24722ad111280712c3846075",
-                "reference": "9737b48a7a4befdf24722ad111280712c3846075",
+                "url": "https://api.github.com/repos/EdgedesignCZ/phpqa/zipball/33386db40705b238bc611a725943c1a4de12eca0",
+                "reference": "33386db40705b238bc611a725943c1a4de12eca0",
                 "shasum": ""
             },
             "require": {
@@ -8866,7 +8866,7 @@
                 "issues": "https://github.com/EdgedesignCZ/phpqa/issues",
                 "source": "https://github.com/EdgedesignCZ/phpqa"
             },
-            "time": "2025-06-16T12:34:39+00:00"
+            "time": "2025-11-21T07:05:44+00:00"
         },
         {
             "name": "grasmash/expander",
@@ -9986,5 +9986,5 @@
         "ext-soap": "1",
         "lib-libxml": "1"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
