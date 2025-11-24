@@ -2526,16 +2526,16 @@
         },
         {
             "name": "spipu/process-bundle",
-            "version": "v2.5.0",
+            "version": "v2.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/symfony-bundle-process.git",
-                "reference": "9d67ee4469122a283ffbf4a3d19b3d5e406d6aa8"
+                "reference": "0332d23b29d1717a68754e8d8e67a94ab47daa8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/symfony-bundle-process/zipball/9d67ee4469122a283ffbf4a3d19b3d5e406d6aa8",
-                "reference": "9d67ee4469122a283ffbf4a3d19b3d5e406d6aa8",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-process/zipball/0332d23b29d1717a68754e8d8e67a94ab47daa8a",
+                "reference": "0332d23b29d1717a68754e8d8e67a94ab47daa8a",
                 "shasum": ""
             },
             "require": {
@@ -2566,22 +2566,22 @@
             "description": "Spipu Process Bundle",
             "support": {
                 "issues": "https://github.com/spipu/symfony-bundle-process/issues",
-                "source": "https://github.com/spipu/symfony-bundle-process/tree/v2.5.0"
+                "source": "https://github.com/spipu/symfony-bundle-process/tree/v2.5.1"
             },
-            "time": "2025-11-20T17:49:06+00:00"
+            "time": "2025-11-24T09:23:23+00:00"
         },
         {
             "name": "spipu/ui-bundle",
-            "version": "v2.5.1",
+            "version": "v2.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/symfony-bundle-ui.git",
-                "reference": "57b23424ab58441d4ffb32c360461962cbce0a55"
+                "reference": "380f7043eb03447c7c2326e91374a8e44f8cba29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/symfony-bundle-ui/zipball/57b23424ab58441d4ffb32c360461962cbce0a55",
-                "reference": "57b23424ab58441d4ffb32c360461962cbce0a55",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-ui/zipball/380f7043eb03447c7c2326e91374a8e44f8cba29",
+                "reference": "380f7043eb03447c7c2326e91374a8e44f8cba29",
                 "shasum": ""
             },
             "require": {
@@ -2612,9 +2612,9 @@
             "description": "Spipu User Interface Bundle",
             "support": {
                 "issues": "https://github.com/spipu/symfony-bundle-ui/issues",
-                "source": "https://github.com/spipu/symfony-bundle-ui/tree/v2.5.1"
+                "source": "https://github.com/spipu/symfony-bundle-ui/tree/v2.5.2"
             },
-            "time": "2025-11-21T11:14:09+00:00"
+            "time": "2025-11-24T09:23:23+00:00"
         },
         {
             "name": "spipu/user-bundle",
@@ -8794,16 +8794,16 @@
         },
         {
             "name": "edgedesign/phpqa",
-            "version": "v1.27.1",
+            "version": "v1.27.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdgedesignCZ/phpqa.git",
-                "reference": "33386db40705b238bc611a725943c1a4de12eca0"
+                "reference": "ad97e48c8dfe406f3fab5f6a6fb0604035f7a3ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdgedesignCZ/phpqa/zipball/33386db40705b238bc611a725943c1a4de12eca0",
-                "reference": "33386db40705b238bc611a725943c1a4de12eca0",
+                "url": "https://api.github.com/repos/EdgedesignCZ/phpqa/zipball/ad97e48c8dfe406f3fab5f6a6fb0604035f7a3ea",
+                "reference": "ad97e48c8dfe406f3fab5f6a6fb0604035f7a3ea",
                 "shasum": ""
             },
             "require": {
@@ -8866,7 +8866,7 @@
                 "issues": "https://github.com/EdgedesignCZ/phpqa/issues",
                 "source": "https://github.com/EdgedesignCZ/phpqa"
             },
-            "time": "2025-11-21T07:05:44+00:00"
+            "time": "2025-11-22T07:41:40+00:00"
         },
         {
             "name": "grasmash/expander",
