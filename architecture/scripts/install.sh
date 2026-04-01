@@ -2,13 +2,15 @@
 
 set -e
 
-bashSource=$(readlink -f "${BASH_SOURCE[0]}")
-cd "$(dirname "$bashSource")"
+CURRENT_SCRIPT=$(readlink -f "${BASH_SOURCE[0]}")
+ARCHITECTURE_FOLDER=$(basename "$(dirname "$(dirname "$CURRENT_SCRIPT")")")
+
+cd "$(dirname "$CURRENT_SCRIPT")"
 cd ../../
 
 ENV_TYPE="none"
 ENV_DO_NOT_GENERATE="yes"
-source ./architecture/scripts/include/init.sh
+source ./$ARCHITECTURE_FOLDER/scripts/include/init.sh
 
 showTitle "Install"
 
@@ -35,6 +37,11 @@ showMessage "Doctrine Schema"
 #showMessage "Run migrations"
 #./bin/console doctrine:migrations:migrate --no-interaction
 
+showMessage "Clean PhpUnit Cache"
+set +e
+rm -rf ./bin/.phpunit > /dev/null 2>&1
+set -e
+
 showMessage "Clean Symfony Cache"
 set +e
 rm -rf ./var/* > /dev/null 2>&1
@@ -46,6 +53,9 @@ sudo -u www-data ./bin/console spipu:configuration:clear-cache
 
 showMessage "Clean Spipu UI Default Grids"
 sudo -u www-data ./bin/console spipu:ui:grid-config:reset
+
+showMessage "Clean Spipu UI Dashboard Default"
+sudo -u www-data ./bin/console dbal:run-sql "DELETE FROM spipu_dashboard_config WHERE name='default';"
 
 showMessage "Fixtures"
 sudo -u www-data ./bin/console spipu:fixtures:load

@@ -7,17 +7,7 @@
 | Web     | https://symfonydemo.lxc/     | Personal account must be used for log-in | 
 | MailDev | http://symfonydemo.lxc:1080/ |  |
 
-You can use LXC, LXD, or Docker technology.
-
-### LXC
-
-```bash
-# Create the dev env
-./architecture/create-lxc.sh
-
-# Remove the dev env
-./architecture/remove-lxc.sh
-```
+You can use LXD, or Docker technology.
 
 ### LXD
 

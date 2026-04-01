@@ -2,16 +2,18 @@
 
 set -e
 
-bashSource=$(readlink -f "${BASH_SOURCE[0]}")
-cd "$(dirname "$bashSource")"
+CURRENT_SCRIPT=$(readlink -f "${BASH_SOURCE[0]}")
+ARCHITECTURE_FOLDER=$(basename "$(dirname "$CURRENT_SCRIPT")")
+
+cd "$(dirname "$CURRENT_SCRIPT")"
 cd ../
 
 ENV_TYPE="lxd"
-source ./architecture/scripts/include/init.sh
+source ./$ARCHITECTURE_FOLDER/scripts/include/init.sh
 
 ENV_IP=`getent hosts ${ENV_HOST} | awk '{ print $1 }'`
 
-cd ./architecture/vm/
+cd ./$ARCHITECTURE_FOLDER/vm/
 
 HOUR=$(date +%H:%M:%S)
 echo "[${HOUR}]===[${ENV_TYPE}]==="

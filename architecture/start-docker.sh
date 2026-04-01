@@ -4,21 +4,22 @@ set -e
 
 if [[ -d "/opt/homebrew/opt/gnu-sed/libexec/gnubin" ]]; then
   PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
-  bashSource=$(greadlink -f "${BASH_SOURCE[0]}")
+  CURRENT_SCRIPT=$(greadlink -f "${BASH_SOURCE[0]}")
 elif [[ -d "/opt/local/opt/gnu-sed/libexec/gnubin" ]]; then
   PATH="/opt/local/opt/gnu-sed/libexec/gnubin:$PATH"
-  bashSource=$(greadlink -f "${BASH_SOURCE[0]}")
+  CURRENT_SCRIPT=$(greadlink -f "${BASH_SOURCE[0]}")
 else
-  bashSource=$(readlink -f "${BASH_SOURCE[0]}")
+  CURRENT_SCRIPT=$(readlink -f "${BASH_SOURCE[0]}")
 fi
+ARCHITECTURE_FOLDER=$(basename "$(dirname "$CURRENT_SCRIPT")")
 
-cd "$(dirname "$bashSource")"
+cd "$(dirname "$CURRENT_SCRIPT")"
 cd ../
 
 ENV_TYPE="docker"
-source ./architecture/scripts/include/init.sh
+source ./$ARCHITECTURE_FOLDER/scripts/include/init.sh
 
-cd ./architecture/vm/
+cd ./$ARCHITECTURE_FOLDER/vm/
 
 HOUR=$(date +%H:%M:%S)
 echo "[${HOUR}]===[${ENV_TYPE}]==="

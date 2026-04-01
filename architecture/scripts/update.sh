@@ -8,14 +8,17 @@ ARCHITECTURE_FOLDER=$(basename "$(dirname "$(dirname "$CURRENT_SCRIPT")")")
 cd "$(dirname "$CURRENT_SCRIPT")"
 cd ../../
 
+ENV_TYPE="none"
 ENV_DO_NOT_GENERATE="yes"
 source ./$ARCHITECTURE_FOLDER/scripts/include/init.sh
 
-showTitle "Provision"
+showTitle "Update"
 
-export DEBIAN_FRONTEND=noninteractive
-export LC_ALL=C
+cd "${ENV_FOLDER}/${WEB_FOLDER}"
 
-source ./$ARCHITECTURE_FOLDER/scripts/provision/env-${ENV_CODE}.sh
+showMessage "Composer"
+composer update
 
-export DEBIAN_FRONTEND=dialog
+showMessage "End"
+
+../$ARCHITECTURE_FOLDER/scripts/install.sh

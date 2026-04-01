@@ -35,7 +35,7 @@ rm -rf /var/www/html
 if [[ ! -d "$ENV_FOLDER/$WEB_FOLDER/public" ]]; then
     sudo -u $ENV_USER mkdir -p $ENV_FOLDER/$WEB_FOLDER/public
     echo "HTTPS Access Point" > $ENV_FOLDER/$WEB_FOLDER/public/index.php
-    chown $ENV_USER.www-data $ENV_FOLDER/$WEB_FOLDER/public/index.php
+    chown $ENV_USER:www-data $ENV_FOLDER/$WEB_FOLDER/public/index.php
 fi
 
 showMessage " > Apache - Service"

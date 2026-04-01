@@ -1,7 +1,7 @@
 #!/bin/bash
 
-PHP_VERSION="8.1"
-PHP_FOLDER="php/8.1"
+PHP_VERSION="8.3"
+PHP_FOLDER="php/8.3"
 
 showMessage " > PHP - Install ${PHP_VERSION}"
 
@@ -12,7 +12,6 @@ apt-get -qq -y install \
     php${PHP_VERSION}-common \
     php${PHP_VERSION}-curl \
     php${PHP_VERSION}-gd \
-    php${PHP_VERSION}-iconv \
     php${PHP_VERSION}-intl \
     php${PHP_VERSION}-mbstring \
     php${PHP_VERSION}-mysql \
@@ -31,7 +30,7 @@ apt-get -qq -y install \
 showMessage " > PHP - Configure"
 
 mkdir -p  /var/log/php/
-chown www-data.www-data /var/log/php
+chown www-data:www-data /var/log/php
 chmod 775 /var/log/php/
 
 mkdir -p /etc/${PHP_FOLDER}/cli/conf.d/

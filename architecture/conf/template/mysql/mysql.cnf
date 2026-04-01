@@ -16,3 +16,6 @@ skip-name-resolve
 slow_query_log = 1
 slow_query_log_file = /var/log/mysql/mysql-slow.log
 long_query_time = 10
+
+# MySQL Mode
+sql_mode = "STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION"

@@ -4,19 +4,20 @@ set -e
 
 if [[ -d "/opt/homebrew/opt/gnu-sed/libexec/gnubin" ]]; then
   PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
-  bashSource=$(greadlink -f "${BASH_SOURCE[0]}")
+  CURRENT_SCRIPT=$(greadlink -f "${BASH_SOURCE[0]}")
 elif [[ -d "/opt/local/opt/gnu-sed/libexec/gnubin" ]]; then
   PATH="/opt/local/opt/gnu-sed/libexec/gnubin:$PATH"
-  bashSource=$(greadlink -f "${BASH_SOURCE[0]}")
+  CURRENT_SCRIPT=$(greadlink -f "${BASH_SOURCE[0]}")
 else
-  bashSource=$(readlink -f "${BASH_SOURCE[0]}")
+  CURRENT_SCRIPT=$(readlink -f "${BASH_SOURCE[0]}")
 fi
+ARCHITECTURE_FOLDER=$(basename "$(dirname "$CURRENT_SCRIPT")")
 
-cd "$(dirname "$bashSource")"
+cd "$(dirname "$CURRENT_SCRIPT")"
 cd ../
 
 ENV_TYPE="docker"
-source ./architecture/scripts/include/init.sh
+source ./$ARCHITECTURE_FOLDER/scripts/include/init.sh
 
 # Parameters SSH
 if [[ -f "$HOME/.ssh/id_ed25519.pub" ]]; then
@@ -25,7 +26,7 @@ else
     SSH_PUB=$(cat ~/.ssh/id_rsa.pub)
 fi
 
-cd ./architecture/vm/
+cd ./$ARCHITECTURE_FOLDER/vm/
 
 HOUR=$(date +%H:%M:%S)
 echo "[${HOUR}]===[${ENV_TYPE}]==="
@@ -52,4 +53,4 @@ ssh-keyscan ${ENV_HOST}     >> ~/.ssh/known_hosts 2> /dev/null
 ssh-keyscan ${ENV_IP}       >> ~/.ssh/known_hosts 2> /dev/null
 echo ""
 
-source ./architecture/create-abstract.sh
+source ./$ARCHITECTURE_FOLDER/create-abstract.sh

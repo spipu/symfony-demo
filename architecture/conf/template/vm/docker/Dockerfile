@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 ARG ssh_pub_key
 
@@ -27,7 +27,7 @@ RUN mkdir -p /root/.ssh
 RUN echo "$ssh_pub_key" > /root/.ssh/authorized_keys
 RUN chmod 700 /root/.ssh
 RUN chmod 600 /root/.ssh/authorized_keys
-RUN chown -R root.root /root/.ssh
+RUN chown -R root:root /root/.ssh
 
 # Configure BASH
 RUN sed -i "s/# export/export/g" /root/.bashrc
@@ -46,11 +46,11 @@ RUN mkdir -p /home/{{ENV_USER}}/.ssh/
 RUN echo "$ssh_pub_key" > /home/{{ENV_USER}}/.ssh/authorized_keys
 RUN chmod 700 /home/{{ENV_USER}}/.ssh
 RUN chmod 600 /home/{{ENV_USER}}/.ssh/authorized_keys
-RUN chown -R {{ENV_USER}}.www-data /home/{{ENV_USER}}/.ssh
+RUN chown -R {{ENV_USER}}:www-data /home/{{ENV_USER}}/.ssh
 
 # Configure Delivery User - WWW FOLDER
 RUN mkdir -p /var/www
-RUN chown {{ENV_USER}}.root /var/www
+RUN chown {{ENV_USER}}:root /var/www
 RUN chmod 755 /var/www
 
 # Configure Delivery User - SUDOER
@@ -58,7 +58,7 @@ RUN mkdir -p /etc/sudoers.d/
 RUN echo 'Runas_Alias SERVERACCOUNTS=www-data' >  /etc/sudoers.d/{{ENV_USER}}
 RUN echo '{{ENV_USER}} ALL=(SERVERACCOUNTS) NOPASSWD: ALL' >> /etc/sudoers.d/{{ENV_USER}}
 RUN chmod 440 /etc/sudoers.d/{{ENV_USER}}
-RUN chown root.root /etc/sudoers.d/{{ENV_USER}}
+RUN chown root:root /etc/sudoers.d/{{ENV_USER}}
 
 # Configure Local
 RUN echo "#Locales"        >> /root/.bashrc

@@ -13,7 +13,7 @@ if [[ "$ENV_TYPE" = "docker" ]]; then
     createFromTemplate "$CONFIG_FOLDER/maildev/maildev.sh" "/etc/init.d/maildev"
     remplaceVariableInFile "/etc/init.d/maildev" "MAILDEV_BIN" "$MAILDEV_BIN"
 
-    chown root.root /etc/init.d/maildev
+    chown root:root /etc/init.d/maildev
     chmod 755       /etc/init.d/maildev
 
     update-rc.d maildev defaults
@@ -22,8 +22,8 @@ else
     createFromTemplate "$CONFIG_FOLDER/maildev/maildev.service" "/etc/systemd/system/maildev.service"
     remplaceVariableInFile "/etc/systemd/system/maildev.service" "MAILDEV_BIN" "$MAILDEV_BIN"
 
-    chown root.root /etc/systemd/system/maildev.service
-    chown 644       /etc/systemd/system/maildev.service
+    chown root:root /etc/systemd/system/maildev.service
+    chmod 644       /etc/systemd/system/maildev.service
 
     systemctl -q enable maildev
     systemctl start maildev

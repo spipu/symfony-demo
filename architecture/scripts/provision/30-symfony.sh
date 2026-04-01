@@ -22,7 +22,7 @@ fi
 ETC_FOLDER="/etc/$ENV_NAME"
 mkdir -p "$ETC_FOLDER"
 chmod 750 "$ETC_FOLDER"
-chown root.www-data "$ETC_FOLDER"
+chown root:www-data "$ETC_FOLDER"
 
 KEY_PAIR_FILENAME="$ETC_FOLDER/key_pair.ppk"
 SYMFONY_FILENAME="$ETC_FOLDER/symfony.yaml"
@@ -30,7 +30,7 @@ SYMFONY_FILENAME="$ETC_FOLDER/symfony.yaml"
 # Generate the keypair
 if [[ ! -f "$KEY_PAIR_FILENAME" ]]; then
   php -r "echo sodium_bin2base64(sodium_crypto_box_keypair(), SODIUM_BASE64_VARIANT_ORIGINAL);" > "$KEY_PAIR_FILENAME"
-  chown root.root "$KEY_PAIR_FILENAME"
+  chown root:root "$KEY_PAIR_FILENAME"
   chmod 600 "$KEY_PAIR_FILENAME"
 fi
 KEY_PAIR=$(cat "$KEY_PAIR_FILENAME")
@@ -39,4 +39,4 @@ KEY_PAIR=$(cat "$KEY_PAIR_FILENAME")
 createFromTemplate "$CONFIG_FOLDER/symfony/app.yaml" "$SYMFONY_FILENAME"
 remplaceVariableInFile "$SYMFONY_FILENAME" "APP_ENCRYPTOR_KEY_PAIR" "$KEY_PAIR"
 chmod 640 "$SYMFONY_FILENAME"
-chown root.www-data "$SYMFONY_FILENAME"
+chown root:www-data "$SYMFONY_FILENAME"

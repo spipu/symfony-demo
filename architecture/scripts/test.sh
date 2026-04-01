@@ -2,12 +2,14 @@
 
 set -e
 
-bashSource=$(readlink -f "${BASH_SOURCE[0]}")
-cd "$(dirname "$bashSource")"
+CURRENT_SCRIPT=$(readlink -f "${BASH_SOURCE[0]}")
+ARCHITECTURE_FOLDER=$(basename "$(dirname "$(dirname "$CURRENT_SCRIPT")")")
+
+cd "$(dirname "$CURRENT_SCRIPT")"
 cd ../../
 
 ENV_DO_NOT_GENERATE="yes"
-source ./architecture/scripts/include/init.sh
+source ./$ARCHITECTURE_FOLDER/scripts/include/init.sh
 
 showTitle "Test Services"
 
@@ -16,7 +18,7 @@ php -v | grep cli
 echo ""
 
 showMessage " => MySQL"
-mysql -h localhost -u"$DB_USER" -p"$DB_PASS" "$DB_NAME" -N -e "SHOW DATABASES like \"$DB_NAME\";"
+mysql -h "$DB_HOST" -u"$DB_USER" -p"$DB_PASS" "$DB_NAME" -N -e "SHOW DATABASES like \"$DB_NAME\";"
 echo ""
 
 showMessage " => Redis - Cache"

@@ -57,6 +57,8 @@ function remplaceVariablesInFile() {
     remplaceVariableInFile "$FILE" "DB_NAME" "$DB_NAME"
     remplaceVariableInFile "$FILE" "DB_USER" "$DB_USER"
     remplaceVariableInFile "$FILE" "DB_PASS" "$DB_PASS"
+    remplaceVariableInFile "$FILE" "DB_HOST" "$DB_HOST"
+    remplaceVariableInFile "$FILE" "DB_VERSION" "$DB_VERSION"
 
     # PHP
     remplaceVariableInFile "$FILE" "PHP_DISPLAY_ERRORS" "$PHP_DISPLAY_ERRORS"

@@ -1,4 +1,4 @@
 #!/bin/bash
 
-source ./architecture/scripts/include/functions.sh
-source ./architecture/scripts/include/env.sh
+source ./$ARCHITECTURE_FOLDER/scripts/include/functions.sh
+source ./$ARCHITECTURE_FOLDER/scripts/include/env.sh

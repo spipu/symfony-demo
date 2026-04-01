@@ -1,9 +1,9 @@
 #!/bin/sh -e
 
 DAEMON="/usr/sbin/mysqld"
-daemon_OPT=""
+DAEMON_OPTS=""
 DAEMONUSER="mysql"
-daemon_NAME="mysqld"
+DAEMON_NAME="mysqld"
 
 PATH="/sbin:/bin:/usr/sbin:/usr/bin"
 
@@ -12,14 +12,17 @@ test -x $DAEMON || exit 0
 . /lib/lsb/init-functions
 
 d_start () {
-    log_daemon_msg "Starting system $daemon_NAME Daemon"
-    start-stop-daemon --background --name $daemon_NAME --start --quiet --chuid $DAEMONUSER --exec $DAEMON -- $daemon_OPT
+    log_daemon_msg "Starting system $DAEMON_NAME Daemon"
+    start-stop-daemon --background --name $DAEMON_NAME \
+        --start --quiet \
+        --chuid $DAEMONUSER \
+        --exec $DAEMON -- $DAEMON_OPTS
     log_end_msg $?
 }
 
 d_stop () {
-    log_daemon_msg "Stopping system $daemon_NAME Daemon"
-    start-stop-daemon --name $daemon_NAME --stop --retry 5 --quiet --name $daemon_NAME
+    log_daemon_msg "Stopping system $DAEMON_NAME Daemon"
+    start-stop-daemon --name $DAEMON_NAME --stop --retry 5 --quiet --name $DAEMON_NAME
     log_end_msg $?
 }
 
@@ -38,18 +41,18 @@ case "$1" in
         ;;
 
     force-stop)
-       d_stop
-        killall -q $daemon_NAME || true
+        d_stop
+        killall -q $DAEMON_NAME || true
         sleep 2
-        killall -q -9 $daemon_NAME || true
+        killall -q -9 $DAEMON_NAME || true
         ;;
 
     status)
-        status_of_proc "$daemon_NAME" "$DAEMON" "system-wide $daemon_NAME" && exit 0 || exit $?
+        status_of_proc "$DAEMON_NAME" "$DAEMON" "system-wide $DAEMON_NAME" && exit 0 || exit $?
         ;;
 
     *)
-        echo "Usage: /etc/init.d/$daemon_NAME {start|stop|force-stop|restart|reload|force-reload|status}"
+        echo "Usage: /etc/init.d/$DAEMON_NAME {start|stop|force-stop|restart|reload|force-reload|status}"
         exit 1
         ;;
 esac
