@@ -61,6 +61,6 @@ Docker environment: `./architecture/create-docker.sh` to build.
 - Commands → Entities, Repositories, Services, FormOptions
 - Steps → Services, Entities, Repositories, FormOptions
 
-**Spipu Bundle integration:** The app extends several Spipu bundles (Core, UI, Configuration, User, Process, Dashboard). The User entity extends `Spipu\UserBundle\Entity\AbstractUser`. Templates extend `@SpipuUi/base.html.twig`. Menu is defined in `App\Service\MenuDefinition`. Dashboard widget sources in `src/App/WidgetSource/` are tagged with `spipu.widget.source` in `config/services.yaml`.
+**Spipu Bundle integration:** The app extends several Spipu bundles (Core, UI, Configuration, User, Process, Dashboard). Controllers extend `Spipu\CoreBundle\Controller\AbstractController` (not Symfony's). The User entity extends `Spipu\UserBundle\Entity\AbstractUser`. Templates extend `@SpipuUi/base.html.twig`. Menu is defined in `App\Service\MenuDefinition`. Dashboard widget sources in `src/App/WidgetSource/` are tagged with `spipu.widget.source` in `config/services.yaml`.
 
-**Configuration:** App parameters defined in `config/app_default_configuration.yaml` using `APP_SETTINGS_*` env vars, overridable via `/etc/symfonydemo/symfony.yaml`. Database is MariaDB. Redis is used for cache (port 6379) and sessions (port 6380).
+**Configuration:** App parameters defined in `config/app_default_configuration.yaml` using `APP_SETTINGS_*` env vars, overridable via `/etc/symfonydemo/symfony.yaml`. Default database is SQLite (for dev/test); MariaDB/MySQL in deployed environments. Redis optionally used for cache and sessions.
