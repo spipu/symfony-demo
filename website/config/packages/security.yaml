@@ -19,6 +19,9 @@ security:
             pattern:      ^/
             provider:     spipu_users
             user_checker: Spipu\UserBundle\Security\UserChecker
+            login_throttling:
+                max_attempts: 5
+                interval: '15 minutes'
             form_login:
                 remember_me: true
                 login_path: spipu_user_security_login

@@ -1,7 +1,7 @@
 doctrine:
     dbal:
-        server_version: '10.11.5-MariaDB'
         url: '%APP_SETTINGS_DATABASE_URL%'
+        server_version: '%APP_SETTINGS_DATABASE_VERSION%'
         profiling_collect_backtrace: '%kernel.debug%'
 
     orm:
@@ -13,6 +13,7 @@ doctrine:
         auto_mapping: true
         controller_resolver:
             auto_mapping: false
+
         mappings:
             App:
                 type: attribute

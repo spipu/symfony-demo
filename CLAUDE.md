@@ -17,8 +17,15 @@ composer install
 # Clear cache
 ./bin/console cache:clear
 
-# Run database migrations
-./bin/console doctrine:migrations:migrate
+# Install assets
+./bin/console assets:install --symlink --relative
+./bin/console spipu:assets:install
+
+# Update database schema (used instead of migrations)
+./bin/console doctrine:schema:update --force --dump-sql
+
+# Load fixtures
+./bin/console spipu:fixtures:load
 
 # Run code quality analysis (from repo root)
 ./quality/analyze.sh
@@ -30,7 +37,9 @@ cd website && ./vendor/bin/phpcs --standard=.phpcs.xml src/
 cd website && ./vendor/bin/deptrac analyze --config-file=.depfile.mvc.yaml
 ```
 
-Docker environment: `./architecture/create-docker.sh` to build, `./architecture/start-docker.sh` to start.
+Full installation script (for Docker/LXD environments): `./architecture/scripts/install.sh`
+
+Docker environment: `./architecture/create-docker.sh` to build.
 
 ## Code Style
 
@@ -38,6 +47,7 @@ Docker environment: `./architecture/create-docker.sh` to build, `./architecture/
 - No global functions (Squiz.Functions.GlobalFunction enforced)
 - No `sizeof`/`count` in loop conditions
 - PHP 8 attributes for Doctrine mapping (not annotations)
+- PHPMD enforces minimum 3-char variable names (exception: `id`), max 30-char
 
 ## Architecture
 
@@ -51,6 +61,6 @@ Docker environment: `./architecture/create-docker.sh` to build, `./architecture/
 - Commands → Entities, Repositories, Services, FormOptions
 - Steps → Services, Entities, Repositories, FormOptions
 
-**Spipu Bundle integration:** The app extends several Spipu bundles (Core, UI, Configuration, User, Process, Dashboard). The User entity extends `Spipu\UserBundle\Entity\AbstractUser`. Templates extend `@SpipuUi/base.html.twig`. Menu is defined in `App\Service\MenuDefinition`.
+**Spipu Bundle integration:** The app extends several Spipu bundles (Core, UI, Configuration, User, Process, Dashboard). The User entity extends `Spipu\UserBundle\Entity\AbstractUser`. Templates extend `@SpipuUi/base.html.twig`. Menu is defined in `App\Service\MenuDefinition`. Dashboard widget sources in `src/App/WidgetSource/` are tagged with `spipu.widget.source` in `config/services.yaml`.
 
-**Configuration:** App parameters defined in `config/app_default_configuration.yaml`, overridable via `/etc/symfonydemo/symfony.yaml`. Database is MariaDB/MySQL.
+**Configuration:** App parameters defined in `config/app_default_configuration.yaml` using `APP_SETTINGS_*` env vars, overridable via `/etc/symfonydemo/symfony.yaml`. Database is MariaDB. Redis is used for cache (port 6379) and sessions (port 6380).

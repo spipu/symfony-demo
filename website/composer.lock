@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ceda903934e9d6ffc35d12c9c9dfacce",
+    "content-hash": "19f6701d739dc9f44f22ad5e885664d9",
     "packages": [
         {
             "name": "doctrine/collections",
@@ -885,16 +885,16 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "3.6.2",
+            "version": "3.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/orm.git",
-                "reference": "4262eb495b4d2a53b45de1ac58881e0091f2970f"
+                "reference": "e88cd591f0786089dee22b972c28aa2076df51c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/orm/zipball/4262eb495b4d2a53b45de1ac58881e0091f2970f",
-                "reference": "4262eb495b4d2a53b45de1ac58881e0091f2970f",
+                "url": "https://api.github.com/repos/doctrine/orm/zipball/e88cd591f0786089dee22b972c28aa2076df51c0",
+                "reference": "e88cd591f0786089dee22b972c28aa2076df51c0",
                 "shasum": ""
             },
             "require": {
@@ -967,9 +967,9 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/orm/issues",
-                "source": "https://github.com/doctrine/orm/tree/3.6.2"
+                "source": "https://github.com/doctrine/orm/tree/3.6.3"
             },
-            "time": "2026-01-30T21:41:41+00:00"
+            "time": "2026-04-02T06:53:27+00:00"
         },
         {
             "name": "doctrine/persistence",
@@ -1659,16 +1659,16 @@
         },
         {
             "name": "spipu/configuration-bundle",
-            "version": "v4.2.0",
+            "version": "v4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/symfony-bundle-configuration.git",
-                "reference": "1d56807e6ca24d7143e7280df9adf86764d43bd2"
+                "reference": "f3869b7ab02da52d452e45cf98f415c0dcf22b5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/symfony-bundle-configuration/zipball/1d56807e6ca24d7143e7280df9adf86764d43bd2",
-                "reference": "1d56807e6ca24d7143e7280df9adf86764d43bd2",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-configuration/zipball/f3869b7ab02da52d452e45cf98f415c0dcf22b5a",
+                "reference": "f3869b7ab02da52d452e45cf98f415c0dcf22b5a",
                 "shasum": ""
             },
             "require": {
@@ -1696,22 +1696,22 @@
             "description": "Spipu Configuration Bundle",
             "support": {
                 "issues": "https://github.com/spipu/symfony-bundle-configuration/issues",
-                "source": "https://github.com/spipu/symfony-bundle-configuration/tree/v4.2.0"
+                "source": "https://github.com/spipu/symfony-bundle-configuration/tree/v4.2.1"
             },
-            "time": "2026-03-31T12:26:52+00:00"
+            "time": "2026-04-04T21:29:47+00:00"
         },
         {
             "name": "spipu/core-bundle",
-            "version": "v4.2.0",
+            "version": "v4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/symfony-bundle-core.git",
-                "reference": "8e6386db586a036673d984ae352842d92749d8a2"
+                "reference": "95a4cb8e1b4777461cd0ae2a187c4a62754d144f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/symfony-bundle-core/zipball/8e6386db586a036673d984ae352842d92749d8a2",
-                "reference": "8e6386db586a036673d984ae352842d92749d8a2",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-core/zipball/95a4cb8e1b4777461cd0ae2a187c4a62754d144f",
+                "reference": "95a4cb8e1b4777461cd0ae2a187c4a62754d144f",
                 "shasum": ""
             },
             "require": {
@@ -1742,9 +1742,9 @@
             "description": "Spipu Core Bundle",
             "support": {
                 "issues": "https://github.com/spipu/symfony-bundle-core/issues",
-                "source": "https://github.com/spipu/symfony-bundle-core/tree/v4.2.0"
+                "source": "https://github.com/spipu/symfony-bundle-core/tree/v4.2.1"
             },
-            "time": "2026-03-31T12:26:52+00:00"
+            "time": "2026-04-04T21:29:47+00:00"
         },
         {
             "name": "spipu/dashboard-bundle",
@@ -1796,16 +1796,16 @@
         },
         {
             "name": "spipu/process-bundle",
-            "version": "v4.2.0",
+            "version": "v4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/symfony-bundle-process.git",
-                "reference": "338289a2afa5fda49f7c256d6d9711ae20c8cf87"
+                "reference": "38b0b0ca0ba9ececbdb9e6b8508501d4fffe3edc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/symfony-bundle-process/zipball/338289a2afa5fda49f7c256d6d9711ae20c8cf87",
-                "reference": "338289a2afa5fda49f7c256d6d9711ae20c8cf87",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-process/zipball/38b0b0ca0ba9ececbdb9e6b8508501d4fffe3edc",
+                "reference": "38b0b0ca0ba9ececbdb9e6b8508501d4fffe3edc",
                 "shasum": ""
             },
             "require": {
@@ -1837,22 +1837,22 @@
             "description": "Spipu Process Bundle",
             "support": {
                 "issues": "https://github.com/spipu/symfony-bundle-process/issues",
-                "source": "https://github.com/spipu/symfony-bundle-process/tree/v4.2.0"
+                "source": "https://github.com/spipu/symfony-bundle-process/tree/v4.2.1"
             },
-            "time": "2026-03-31T13:35:32+00:00"
+            "time": "2026-04-04T21:29:47+00:00"
         },
         {
             "name": "spipu/ui-bundle",
-            "version": "v4.2.0",
+            "version": "v4.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/symfony-bundle-ui.git",
-                "reference": "2b32010aa5503d97ccec9313402fcf9a1197c29f"
+                "reference": "ca93bfbc2e9ccff74531bef451b240c92762ced2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/symfony-bundle-ui/zipball/2b32010aa5503d97ccec9313402fcf9a1197c29f",
-                "reference": "2b32010aa5503d97ccec9313402fcf9a1197c29f",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-ui/zipball/ca93bfbc2e9ccff74531bef451b240c92762ced2",
+                "reference": "ca93bfbc2e9ccff74531bef451b240c92762ced2",
                 "shasum": ""
             },
             "require": {
@@ -1884,27 +1884,28 @@
             "description": "Spipu User Interface Bundle",
             "support": {
                 "issues": "https://github.com/spipu/symfony-bundle-ui/issues",
-                "source": "https://github.com/spipu/symfony-bundle-ui/tree/v4.2.0"
+                "source": "https://github.com/spipu/symfony-bundle-ui/tree/v4.2.2"
             },
-            "time": "2026-03-30T14:57:01+00:00"
+            "time": "2026-04-02T21:56:30+00:00"
         },
         {
             "name": "spipu/user-bundle",
-            "version": "v4.2.0",
+            "version": "v4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/symfony-bundle-user.git",
-                "reference": "b7a147c187a6c4dde4428412e0e58582b8892526"
+                "reference": "19dbadbace7b9da78aabceab43d02bb8ac65f0e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/symfony-bundle-user/zipball/b7a147c187a6c4dde4428412e0e58582b8892526",
-                "reference": "b7a147c187a6c4dde4428412e0e58582b8892526",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-user/zipball/19dbadbace7b9da78aabceab43d02bb8ac65f0e4",
+                "reference": "19dbadbace7b9da78aabceab43d02bb8ac65f0e4",
                 "shasum": ""
             },
             "require": {
                 "doctrine/orm": "^3.0",
                 "php": "^8.1",
+                "spipu/configuration-bundle": "^4.0",
                 "spipu/ui-bundle": "^4.0",
                 "symfony/framework-bundle": "^6.4"
             },
@@ -1927,9 +1928,9 @@
             "description": "Spipu User Security Bundle",
             "support": {
                 "issues": "https://github.com/spipu/symfony-bundle-user/issues",
-                "source": "https://github.com/spipu/symfony-bundle-user/tree/v4.2.0"
+                "source": "https://github.com/spipu/symfony-bundle-user/tree/v4.2.1"
             },
-            "time": "2026-03-31T12:26:52+00:00"
+            "time": "2026-04-04T21:32:31+00:00"
         },
         {
             "name": "symfony/asset",
@@ -4269,16 +4270,16 @@
         },
         {
             "name": "symfony/monolog-bundle",
-            "version": "v3.11.1",
+            "version": "v3.11.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/monolog-bundle.git",
-                "reference": "0e675a6e08f791ef960dc9c7e392787111a3f0c1"
+                "reference": "d87468010570b2ec766152184918ee8d267c7411"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/0e675a6e08f791ef960dc9c7e392787111a3f0c1",
-                "reference": "0e675a6e08f791ef960dc9c7e392787111a3f0c1",
+                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/d87468010570b2ec766152184918ee8d267c7411",
+                "reference": "d87468010570b2ec766152184918ee8d267c7411",
                 "shasum": ""
             },
             "require": {
@@ -4325,7 +4326,7 @@
             ],
             "support": {
                 "issues": "https://github.com/symfony/monolog-bundle/issues",
-                "source": "https://github.com/symfony/monolog-bundle/tree/v3.11.1"
+                "source": "https://github.com/symfony/monolog-bundle/tree/v3.11.2"
             },
             "funding": [
                 {
@@ -4345,7 +4346,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-12-08T07:58:26+00:00"
+            "time": "2026-04-02T18:23:01+00:00"
         },
         {
             "name": "symfony/notifier",
@@ -5400,6 +5401,81 @@
                 }
             ],
             "time": "2026-02-13T09:42:46+00:00"
+        },
+        {
+            "name": "symfony/rate-limiter",
+            "version": "v6.4.35",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/rate-limiter.git",
+                "reference": "6540413badbf393692e8d419eb3abccca34b6e25"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/rate-limiter/zipball/6540413badbf393692e8d419eb3abccca34b6e25",
+                "reference": "6540413badbf393692e8d419eb3abccca34b6e25",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "symfony/deprecation-contracts": "^2.5|^3",
+                "symfony/options-resolver": "^5.4|^6.0|^7.0"
+            },
+            "require-dev": {
+                "psr/cache": "^1.0|^2.0|^3.0",
+                "symfony/lock": "^5.4|^6.0|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\RateLimiter\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Wouter de Jong",
+                    "email": "wouter@wouterj.nl"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides a Token Bucket implementation to rate limit input and output in your application",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "limiter",
+                "rate-limiter"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/rate-limiter/tree/v6.4.35"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-03-03T13:58:39+00:00"
         },
         {
             "name": "symfony/routing",
