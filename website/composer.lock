@@ -1803,16 +1803,16 @@
         },
         {
             "name": "spipu/dashboard-bundle",
-            "version": "v5.0.0",
+            "version": "v5.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/symfony-bundle-dashboard.git",
-                "reference": "a9854b2c42383dd2dd9fc30c6ab63036c495896a"
+                "reference": "5a1da3a086d67e1678cd8e120998a6c5ecbcfef1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/symfony-bundle-dashboard/zipball/a9854b2c42383dd2dd9fc30c6ab63036c495896a",
-                "reference": "a9854b2c42383dd2dd9fc30c6ab63036c495896a",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-dashboard/zipball/5a1da3a086d67e1678cd8e120998a6c5ecbcfef1",
+                "reference": "5a1da3a086d67e1678cd8e120998a6c5ecbcfef1",
                 "shasum": ""
             },
             "require": {
@@ -1845,9 +1845,9 @@
             "description": "Spipu Dashboard Bundle",
             "support": {
                 "issues": "https://github.com/spipu/symfony-bundle-dashboard/issues",
-                "source": "https://github.com/spipu/symfony-bundle-dashboard/tree/v5.0.0"
+                "source": "https://github.com/spipu/symfony-bundle-dashboard/tree/v5.0.1"
             },
-            "time": "2026-04-08T21:36:40+00:00"
+            "time": "2026-04-12T19:12:32+00:00"
         },
         {
             "name": "spipu/process-bundle",
@@ -1898,16 +1898,16 @@
         },
         {
             "name": "spipu/ui-bundle",
-            "version": "v5.0.0",
+            "version": "v5.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/symfony-bundle-ui.git",
-                "reference": "119b5af168d7452810f507e46cf999bb21c77882"
+                "reference": "a0a86973fac0667fd679f275eeec79c5bd6a6200"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/symfony-bundle-ui/zipball/119b5af168d7452810f507e46cf999bb21c77882",
-                "reference": "119b5af168d7452810f507e46cf999bb21c77882",
+                "url": "https://api.github.com/repos/spipu/symfony-bundle-ui/zipball/a0a86973fac0667fd679f275eeec79c5bd6a6200",
+                "reference": "a0a86973fac0667fd679f275eeec79c5bd6a6200",
                 "shasum": ""
             },
             "require": {
@@ -1939,9 +1939,9 @@
             "description": "Spipu User Interface Bundle",
             "support": {
                 "issues": "https://github.com/spipu/symfony-bundle-ui/issues",
-                "source": "https://github.com/spipu/symfony-bundle-ui/tree/v5.0.0"
+                "source": "https://github.com/spipu/symfony-bundle-ui/tree/v5.0.1"
             },
-            "time": "2026-04-12T17:24:35+00:00"
+            "time": "2026-04-12T19:12:32+00:00"
         },
         {
             "name": "spipu/user-bundle",
