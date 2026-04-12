@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Symfony 7.4 demo application (PHP >= 8.3) for testing Spipu Bundles. The main application lives in `website/`, with deployment tooling in `architecture/` and code quality tooling in `quality/`.
+Symfony 7.4 demo application (PHP >= 8.3) for testing Spipu Bundles (v5.x). The main application lives in `website/`, with deployment tooling in `architecture/` and code quality tooling in `quality/`.
 
 ## Common Commands
 
@@ -34,8 +34,6 @@ composer install
 cd website && ./vendor/bin/phpcs --standard=.phpcs.xml src/
 
 # Run architecture validation (deptrac)
-cd website && ./vendor/bin/deptrac analyze --config-file=.depfile.mvc.yaml
-# or from repo root:
 ./quality/deptrac.sh
 ```
 
@@ -59,6 +57,12 @@ There are no automated tests — `website/tests/` exists but is empty.
 - PHP 8 attributes for Doctrine mapping (not annotations)
 - PHPMD enforces minimum 3-char variable names (exception: `id`), maximum 30-char
 - `quality/analyze.sh` uses `.phpqa.yml` which enforces **0 errors** for phpcs, phpmd, phpcpd, and parallel-lint
+
+## Frontend Libraries
+
+- **Bootstrap 5.3** — use `data-bs-*` attributes, `me-/ms-/pe-/ps-*` spacing, `text-start/end`, `float-start/end`, `text-bg-*` badges, `form-select`, `fw-bold`, `mb-3` (not `form-group`), `w-100` (not `btn-block`)
+- **jQuery 4.0** — no `$.proxy()`, `$.grep()` ; use `.bind()` and `Array.filter()`
+- **FontAwesome 7** — use `fa-solid`/`fa-regular`/`fa-brands` prefixes (not `fas`/`far`/`fab`/`fa`). Icon names: `pen-to-square`, `xmark`, `right-to-bracket`, `right-from-bracket`, `magnifying-glass`, `gear`, `trash-can`, `rotate`, `triangle-exclamation`. In PHP `setIcon()` calls, the name is passed without the `fa-` prefix.
 
 ## Architecture
 
@@ -85,3 +89,7 @@ There are no automated tests — `website/tests/` exists but is empty.
 - Process examples defined in `config/process/` as YAML (see `test_hello.yaml` for structure)
 
 **Configuration:** App parameters defined in `config/app_default_configuration.yaml` using `APP_SETTINGS_*` env vars, overridable via `/etc/symfonydemo/symfony.yaml`. Default database is SQLite (for dev/test); MariaDB/MySQL in deployed environments. Redis optionally used for cache and sessions.
+
+**Quality tooling notes:**
+- `website/patches/` contains a patch for `consolidation/robo` (PHPQA dependency) required for Symfony Console 7.4 compatibility — do not remove until Robo releases a fix natively
+- Deptrac config (`.depfile.mvc.yaml`) uses the `deptrac:` root key and `type: classLike` / `value:` collector syntax (new format since deptrac v2)
