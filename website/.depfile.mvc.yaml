@@ -1,48 +1,48 @@
-parameters:
+deptrac:
   paths:
     - ./src
   layers:
     # MVC Layers
     - name: MVC_Command
       collectors:
-        - type: className
-          regex: App\\Command\\.*
+        - type: classLike
+          value: App\\Command\\.*
     - name: MVC_Controller
       collectors:
-        - type: className
-          regex: App\\Controller\\.*
+        - type: classLike
+          value: App\\Controller\\.*
     - name: MVC_Entity
       collectors:
-        - type: className
-          regex: App\\Entity\\.*
+        - type: classLike
+          value: App\\Entity\\.*
     - name: MVC_Form
       collectors:
-        - type: className
-          regex: App\\Form\\[^\\]*$
+        - type: classLike
+          value: App\\Form\\[^\\]*$
     - name: MVC_FormOptions
       collectors:
-        - type: className
-          regex: App\\Form\\Options\\.*
+        - type: classLike
+          value: App\\Form\\Options\\.*
     - name: MVC_Repository
       collectors:
-        - type: className
-          regex: App\\Repository\\.*
+        - type: classLike
+          value: App\\Repository\\.*
     - name: MVC_Service
       collectors:
-        - type: className
-          regex: App\\(Service|Assets|Fixtures|Twig)\\.*
+        - type: classLike
+          value: App\\(Service|Assets|Fixtures|Twig)\\.*
     - name: MVC_Step
       collectors:
-        - type: className
-          regex: App\\Step\\.*
+        - type: classLike
+          value: App\\Step\\.*
     - name: MVC_Ui
       collectors:
-        - type: className
-          regex: App\\Ui\\.*
+        - type: classLike
+          value: App\\Ui\\.*
     - name: MVC_Validator
       collectors:
-        - type: className
-          regex: App\\Validator\\.*
+        - type: classLike
+          value: App\\Validator\\.*
 
   ruleset:
     # MVC

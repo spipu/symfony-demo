@@ -1,0 +1,22 @@
+--- a/src/Application.php
++++ b/src/Application.php
+@@ -73,4 +73,19 @@ class Application extends SymfonyApplication
+         $selfUpdateCommand = new \SelfUpdate\SelfUpdateCommand($this->getName(), $this->getVersion(), $repository);
+         $this->add($selfUpdateCommand);
+     }
++
++    /**
++     * Compatibility wrapper: Symfony 7.4 deprecated add() in favor of addCommand().
++     *
++     * @param Command $command
++     * @return Command|null
++     */
++    public function add(Command $command): ?Command
++    {
++        if (method_exists(parent::class, 'addCommand')) {
++            return parent::addCommand($command);
++        }
++
++        return parent::add($command);
++    }
+ }

@@ -5,19 +5,20 @@
     "description": "A demo to test bundles",
     "prefer-stable": true,
     "require": {
-        "php": ">=8.1",
+        "php": ">=8.3",
         "ext-ctype": "*",
         "ext-curl": "*",
         "ext-iconv": "*",
         "ext-json": "*",
         "ext-pdo": "*",
         "ext-posix": "*",
+        "ext-redis": "*",
         "ext-sodium": "*",
         "ext-zip": "*",
         "doctrine/doctrine-bundle": "*",
         "doctrine/doctrine-migrations-bundle": "*",
         "doctrine/orm": "*",
-        "predis/predis": "^2.0",
+        "predis/predis": "*",
         "spipu/configuration-bundle": "*",
         "spipu/core-bundle": "*",
         "spipu/dashboard-bundle": "*",
@@ -54,7 +55,8 @@
         "twig/twig": "^3.0"
     },
     "require-dev": {
-        "qossmic/deptrac-shim": "*",
+        "cweagans/composer-patches": "^2.0",
+        "deptrac/deptrac": "*",
         "edgedesign/phpqa": "*",
         "php-parallel-lint/php-parallel-lint": "*",
         "pdepend/pdepend": "*",
@@ -73,28 +75,29 @@
         "optimize-autoloader": true,
         "sort-packages": true,
         "platform": {
-            "php": "8.1.2",
+            "php": "8.3.6",
             "ext-bcmath": "1",
             "ext-ctype": "1",
-            "ext-gd": "1",
-            "ext-spl": "1",
-            "ext-dom": "1",
-            "ext-simplexml": "1",
-            "ext-mcrypt": "1",
-            "ext-hash": "1",
             "ext-curl": "1",
+            "ext-dom": "1",
+            "ext-gd": "1",
+            "ext-hash": "1",
             "ext-iconv": "1",
             "ext-intl": "1",
-            "ext-xsl": "1",
             "ext-mbstring": "1",
             "ext-openssl": "1",
-            "ext-zip": "1",
             "ext-pdo_mysql": "1",
+            "ext-redis": "6.1",
+            "ext-simplexml": "1",
             "ext-soap": "1",
+            "ext-spl": "1",
+            "ext-xsl": "1",
+            "ext-zip": "1",
             "lib-libxml": "1"
         },
         "allow-plugins": {
             "composer/package-versions-deprecated": true,
+            "cweagans/composer-patches": true,
             "symfony/flex": true,
             "symfony/runtime": true
         }
@@ -112,6 +115,7 @@
         "symfony/polyfill-php74": "*",
         "symfony/polyfill-php80": "*",
         "symfony/polyfill-php81": "*",
+        "symfony/polyfill-php82": "*",
         "sebastian/phpcpd": "*",
         "phploc/phploc": "*"
     },
@@ -134,7 +138,12 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "6.4.*"
+            "require": "7.4.*"
+        },
+        "patches": {
+            "consolidation/robo": {
+                "Fix Symfony Console 7.4 Application::add() deprecation": "patches/robo-symfony-console-deprecation.patch"
+            }
         }
     }
 }

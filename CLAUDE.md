@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Symfony 6.4 demo application (PHP >= 8.1) for testing Spipu Bundles. The main application lives in `website/`, with deployment tooling in `architecture/` and code quality tooling in `quality/`.
+Symfony 7.4 demo application (PHP >= 8.3) for testing Spipu Bundles. The main application lives in `website/`, with deployment tooling in `architecture/` and code quality tooling in `quality/`.
 
 ## Common Commands
 
@@ -42,6 +42,12 @@ cd website && ./vendor/bin/deptrac analyze --config-file=.depfile.mvc.yaml
 Full installation script (for Docker/LXD environments): `./architecture/scripts/install.sh`
 
 Docker environment: `./architecture/create-docker.sh` to build.
+
+**To validate on the container:**
+```bash
+ssh delivery@symfonydemo.lxc
+~/install.sh
+```
 
 There are no automated tests — `website/tests/` exists but is empty.
 

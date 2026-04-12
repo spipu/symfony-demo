@@ -71,11 +71,11 @@ class MenuDefinition implements DefinitionInterface
                 ->getParentItem()
             ->addChild('spipu.user.page.security.log_in', 'spipu-user-login', 'spipu_user_security_login')
                 ->setACL(false)
-                ->setIcon('sign-in-alt')
+                ->setIcon('right-to-bracket')
                 ->getParentItem()
             ->addChild('spipu.user.page.security.log_out', 'spipu-user-logout', 'spipu_user_security_logout')
                 ->setACL(true)
-                ->setIcon('sign-out-alt')
+                ->setIcon('right-from-bracket')
                 ->getParentItem()
         ;
     }

@@ -1,0 +1,17 @@
+{
+    "_hash": "c87427a75e79ae03cac01291e4a2bed9f80b874c1531c898a428b20f687c86a7",
+    "patches": {
+        "consolidation/robo": [
+            {
+                "package": "consolidation/robo",
+                "description": "Fix Symfony Console 7.4 Application::add() deprecation",
+                "url": "patches/robo-symfony-console-deprecation.patch",
+                "sha256": "b4f0f2b522f6d4df3bce81c948250547754e7864cfd133fc97357e5ad4db2b99",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ]
+    }
+}
