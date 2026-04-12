@@ -3,6 +3,11 @@
 PHP_VERSION="8.3"
 PHP_FOLDER="php/8.3"
 
+showMessage " > PHP - Add PPA ondrej/php"
+
+add-apt-repository -y ppa:ondrej/php > /dev/null
+apt-get -qq update > /dev/null
+
 showMessage " > PHP - Install ${PHP_VERSION}"
 
 apt-get -qq -y install \
