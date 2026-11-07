@@ -16,7 +16,6 @@ source ./$ARCHITECTURE_FOLDER/scripts/provision/12-mysql.sh
 source ./$ARCHITECTURE_FOLDER/scripts/provision/13-redis.sh
 source ./$ARCHITECTURE_FOLDER/scripts/provision/20-composer.sh
 source ./$ARCHITECTURE_FOLDER/scripts/provision/21-npm.sh
-source ./$ARCHITECTURE_FOLDER/scripts/provision/22-yarn.sh
 source ./$ARCHITECTURE_FOLDER/scripts/provision/23-mail-dev.sh
 source ./$ARCHITECTURE_FOLDER/scripts/provision/30-symfony.sh
 source ./$ARCHITECTURE_FOLDER/scripts/provision/40-project.sh

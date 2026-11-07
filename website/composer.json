@@ -59,7 +59,7 @@
         "deptrac/deptrac": "*",
         "edgedesign/phpqa": "*",
         "php-parallel-lint/php-parallel-lint": "*",
-        "pdepend/pdepend": "*",
+        "pdepend/pdepend": "^2.15",
         "phpmd/phpmd": "*",
         "phpmetrics/phpmetrics": "*",
         "squizlabs/php_codesniffer": "*",

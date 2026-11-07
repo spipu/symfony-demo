@@ -20,7 +20,7 @@ Create the dev environment:
 ## Install the Spipu Bundles
 
 ```bash
-ssh delivery@symfonydemo.lxc
+ssh delivery@symfonydemo.lxd
 cd /var/www/symfonydemo/website
 
 composer update
@@ -65,7 +65,7 @@ Modify the path `.../src/...` to `.../src/App/...`  in the following files:
 Launch the following command
 
 ```bash
-ssh delivery@symfonydemo.lxc
+ssh delivery@symfonydemo.lxd
 cd /var/www/symfonydemo/website
 
 ../architecture/scripts/update.sh
@@ -374,7 +374,7 @@ Modify the `scripts.auto-scripts` config in the `./composer.json` file by adding
 Launch the following command
 
 ```bash
-ssh delivery@symfonydemo.lxc
+ssh delivery@symfonydemo.lxd
 cd /var/www/symfonydemo/website
 
 ../architecture/scripts/update.sh

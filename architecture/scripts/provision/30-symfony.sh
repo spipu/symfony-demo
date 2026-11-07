@@ -19,13 +19,13 @@ if ! grep "APP_ENV" /etc/environment > /dev/null; then
 fi
 
 # Create the etc folder
-ETC_FOLDER="/etc/$ENV_NAME"
+ETC_FOLDER="/etc/symfony"
 mkdir -p "$ETC_FOLDER"
 chmod 750 "$ETC_FOLDER"
 chown root:www-data "$ETC_FOLDER"
 
-KEY_PAIR_FILENAME="$ETC_FOLDER/key_pair.ppk"
-SYMFONY_FILENAME="$ETC_FOLDER/symfony.yaml"
+KEY_PAIR_FILENAME="$ETC_FOLDER/$ENV_NAME.key_pair.ppk"
+SYMFONY_FILENAME="$ETC_FOLDER/$ENV_NAME.yaml"
 
 # Generate the keypair
 if [[ ! -f "$KEY_PAIR_FILENAME" ]]; then

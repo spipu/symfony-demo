@@ -30,9 +30,11 @@ security:
                 default_target_path: app_home
             remember_me:
                 secret: "%kernel.secret%"
-                name: op_user_remember
-                lifetime: 31536000 # 1 year
-                httponly: false
+                name: symfony_demo_remember
+                lifetime: 604800 # 7 days
+                httponly: true
+                secure: auto
+                signature_properties: ['password', 'email']
             logout:
                 path: spipu_user_security_logout
                 target: app_home

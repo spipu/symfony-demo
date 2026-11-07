@@ -7,7 +7,9 @@ fi
 
 HOUR=$(date +%H:%M:%S)
 echo "[${HOUR}]===[CLEAN]==="
-sudo rm -rf ./${WEB_FOLDER}/var
+ssh root@${ENV_HOST} -p ${ENV_SSH_PORT} "rm -rf ${ENV_FOLDER}/${WEB_FOLDER}/var"
+ssh root@${ENV_HOST} -p ${ENV_SSH_PORT} "rm -rf ${ENV_FOLDER}/${WEB_FOLDER}/vendor"
+(cd ./${WEB_FOLDER} && composer install --ignore-platform-reqs --no-scripts)
 echo ""
 
 HOUR=$(date +%H:%M:%S)

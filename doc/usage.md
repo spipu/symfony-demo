@@ -4,8 +4,8 @@
 
 | Site | Url | Comment |
 |------|-----|---------|
-| Web     | https://symfonydemo.lxc/     | Personal account must be used for log-in | 
-| MailDev | http://symfonydemo.lxc:1080/ |  |
+| Web     | https://symfonydemo.lxd/     | Personal account must be used for log-in | 
+| MailDev | http://symfonydemo.lxd:1080/ |  |
 
 You can use LXD, or Docker technology.
 

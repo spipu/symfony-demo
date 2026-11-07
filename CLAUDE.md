@@ -43,7 +43,7 @@ Docker environment: `./architecture/create-docker.sh` to build.
 
 **To validate on the container:**
 ```bash
-ssh delivery@symfonydemo.lxc
+ssh delivery@symfonydemo.lxd
 ~/install.sh
 ```
 
@@ -88,7 +88,7 @@ There are no automated tests — `website/tests/` exists but is empty.
 - Spipu configuration values are accessed in Twig via `{{ 'app.website.name'|get_config }}`
 - Process examples defined in `config/process/` as YAML (see `test_hello.yaml` for structure)
 
-**Configuration:** App parameters defined in `config/app_default_configuration.yaml` using `APP_SETTINGS_*` env vars, overridable via `/etc/symfonydemo/symfony.yaml`. Default database is SQLite (for dev/test); MariaDB/MySQL in deployed environments. Redis optionally used for cache and sessions.
+**Configuration:** App parameters defined in `config/app_default_configuration.yaml` using `APP_SETTINGS_*` env vars, overridable via `/etc/symfony/symfonydemo.yaml`. Default database is SQLite (for dev/test); MariaDB/MySQL in deployed environments. Redis optionally used for cache and sessions.
 
 **Quality tooling notes:**
 - `website/patches/` contains a patch for `consolidation/robo` (PHPQA dependency) required for Symfony Console 7.4 compatibility — do not remove until Robo releases a fix natively

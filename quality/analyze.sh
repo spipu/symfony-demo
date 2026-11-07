@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# Option --no-browser: do not open the reports in Firefox
+NO_BROWSER=0
+ARGS=()
+for ARG in "$@"; do
+  if [[ "$ARG" == "--no-browser" ]]; then
+    NO_BROWSER=1
+  else
+    ARGS+=("$ARG")
+  fi
+done
+set -- "${ARGS[@]}"
+
 # Get the main folder
 MAIN_FOLDER="${BASH_SOURCE[0]}"
 MAIN_FOLDER="$( realpath "${MAIN_FOLDER}")"
@@ -29,7 +41,7 @@ chmod +x "${BIN_FOLDER}/phploc.phar"
 ln -fs "${BIN_FOLDER}/phploc.phar" "${MAIN_FOLDER}/website/vendor/bin/phploc"
 
 # Configure PHPCS
-./vendor/bin/phpcs --config-set php_version 80306
+./vendor/bin/phpcs --config-set php_version 80331
 
 # Tests - PHPQA
 ./vendor/bin/phpqa \
@@ -42,4 +54,8 @@ ln -fs "${BIN_FOLDER}/phploc.phar" "${MAIN_FOLDER}/website/vendor/bin/phploc"
     --execution "no-parallel"
 
 # Output
-firefox "${LOG_FOLDER}/phpqa.html"
+if [[ "$NO_BROWSER" == "1" ]]; then
+  echo "Report: ${LOG_FOLDER}/phpqa.html"
+else
+  firefox "${LOG_FOLDER}/phpqa.html"
+fi

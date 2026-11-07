@@ -2,7 +2,7 @@
 
 # Generic Parameters
 ENV_NAME="symfonydemo"
-ENV_HOST="${ENV_NAME}.lxc"
+ENV_HOST="${ENV_NAME}.lxd"
 ENV_SSH_PORT="22"
 ENV_MODE="dev"
 ENV_CODE="dev"
@@ -14,11 +14,6 @@ WEB_FOLDER="website"
 ENV_HOST_SUB_HOSTS=(
 )
 ENV_HOST_SUB_HOSTS_TXT=""
-
-# Delivery
-GIT_PROJECT="git@github.com:spipu/symfony-demo.git"
-GIT_BRANCH="master"
-RELEASES_TO_KEEP=5
 
 # MySQL
 DB_NAME="$ENV_NAME"
@@ -36,7 +31,6 @@ SSL_CERT_PRIVATE="${SSL_CERT_FOLDER}/dev-cert.key"
 SSL_CERT_CHAIN="${SSL_CERT_FOLDER}/dev-cert.key"
 
 # Apache
-APACHE_PROTECT_ADMIN="all"
 EXPORT_FOLDER="$ENV_FOLDER/$WEB_FOLDER/var/export/"
 
 # Symfony

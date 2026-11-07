@@ -13,5 +13,6 @@ parameters:
     APP_SETTINGS_REDIS_SESSION_DB:    ''
     APP_SETTINGS_REDIS_SESSION_HOST:  ''
     APP_SETTINGS_REDIS_SESSION_PORT:  ''
+    ENV_HOST:                         'symfonydemo.lxd'
     # needed for functional tests
     APP_SETTINGS_APP_ENCRYPTOR_KEY_PAIR: '%env(APP_ENCRYPTOR_KEY_PAIR)%'
