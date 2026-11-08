@@ -2,6 +2,8 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+> **Self-sufficiency notice for AI assistants:** This file is the **sole source of truth** for project conventions, coding standards, and collaboration rules. The repo is worked on from multiple machines; any local auto-memory (e.g. `~/.claude/projects/.../memory/`) is **not** synchronized between those machines and must not be read from or written to for this project. If a rule or fact isn't documented here, ask the maintainer — don't infer from local state. When the maintainer reveals a durable rule or preference during a session, propose updating `CLAUDE.md` rather than saving to local memory.
+
 ## Project Overview
 
 Symfony 7.4 demo application (PHP >= 8.3) for testing Spipu Bundles (v5.x). The main application lives in `website/`, with deployment tooling in `architecture/` and code quality tooling in `quality/`.
@@ -93,3 +95,13 @@ There are no automated tests — `website/tests/` exists but is empty.
 **Quality tooling notes:**
 - `website/patches/` contains a patch for `consolidation/robo` (PHPQA dependency) required for Symfony Console 7.4 compatibility — do not remove until Robo releases a fix natively
 - Deptrac config (`.depfile.mvc.yaml`) uses the `deptrac:` root key and `type: classLike` / `value:` collector syntax (new format since deptrac v2)
+
+## Maintainer Documentation Base (conditional)
+
+If the directory `~/git/claude/memory/` exists on the current machine, load it at session start **in addition to** this file (it is a git-synchronized documentation base, not the local auto-memory excluded by the self-sufficiency notice above):
+
+1. All instruction files in `~/git/claude/memory/instructions/` (read `_main.md` first).
+2. Everything those instructions mandate (notably `~/git/claude/memory/index.md` and `~/git/claude/memory/prompts/_main.md`, including its `.claude/commands/spipu-*.md` synchronization directive).
+3. All files in `~/git/claude/memory/chantiers/`.
+
+If the directory does not exist, skip this section silently — this file remains the sole source of truth.
